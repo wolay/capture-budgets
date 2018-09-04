@@ -1,0 +1,15 @@
+
+Log Entry : 
+01/20/2016 10:17:05
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+01/20/2016 16:08:12
+Error in: http://localhost:61559/Admin/ManagePipelineSection.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/20/2016 16:16:47
+Error in: http://localhost:61559/Admin/ManagePipelineSection.aspx. Error Message:Error: 
+__________________________

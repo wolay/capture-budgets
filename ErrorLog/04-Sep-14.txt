@@ -1,0 +1,5 @@
+
+Log Entry : 
+09/04/2014 09:03:28
+Error in: http://localhost:56069/Admin/UserSetup.aspx. Error Message:Error: 
+__________________________

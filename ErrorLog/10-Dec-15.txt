@@ -1,0 +1,6 @@
+
+Log Entry : 
+12/10/2015 23:01:18
+Error in: http://localhost:61559/Admin/UserSetup.aspx. Error Message:Error: The server is not operational.
+
+__________________________

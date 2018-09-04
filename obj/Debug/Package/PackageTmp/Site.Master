@@ -1,0 +1,221 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BudgetCapture.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <title><%: Page.Title %> - BudgetCapture</title>
+   
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" /> 
+    <link href="css/ModelPopup.css" rel="stylesheet" type="text/css" />
+    <%--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>--%>
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+     <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+           <asp:ScriptReference Path="Scripts/jquery-1.8.3.min.js" />  
+            <asp:ScriptReference Path="js/action.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div class="navbar navbar-inverse navbar-fixed-top nav-header-bg">
+      <div class="navbar-inner-updated">
+        <div class="container-fluid container-fluid-fixedwidth">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand appName" href="~/Default.aspx" runat="server">
+              <img src="~/img/ngclogo.png" runat="server" />  <img src="~/img/budget-smart.png" runat="server" />  </a>
+          <div class="nav-collapse collapse">
+         <p class="navbar-text pull-right">
+              <asp:LoginView ID="LoginView1" runat="server">
+        <AnonymousTemplate>
+           
+        </AnonymousTemplate>
+        <LoggedInTemplate>
+           <span class="name">Hi, 
+               <asp:Label ID="lbFName" runat="server" Text=""></asp:Label>
+                </span> 
+               <asp:Label ID="lbRole" runat="server" Text=""></asp:Label> <span>|</span>
+               <asp:LoginStatus ID="LoginStatus1" LoginText="Sign Out" runat="server" />
+        </LoggedInTemplate>
+        </asp:LoginView>
+            <%--  Logged in as <a href="#" class="navbar-link">Username</a><span class="divider">|</span><a href="#" class="navbar-link">Departmant Name(0001)</a><span class="divider">|</span><a href="#" class="navbar-link">Log out</a>--%>
+            </p>
+          </div><!--/.nav-collapse -->
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid row-fluid-adjusted">
+        <div class="span3">
+          <div class="well sidebar-nav sidebar-adjusted">
+             <ul class="nav nav-list">
+               <li class="nav-header">DashBoard</li>
+              <li><a id="A1" href="~/Default.aspx"  runat="server">Budget Summary View</a></li>
+            </ul>
+              <ul class="nav nav-list" runat="server" id="dvUsers" visible="false">
+                  <li class="nav-header">Budget Types</li>
+                  <asp:Repeater ID="rListMenu" runat="server">
+                      <ItemTemplate>
+                          <li>
+                              <asp:HyperLink ID="lnkmenu" runat="server" NavigateUrl='<%#Eval("Url") %>'><%#Eval("BudgetItem")%></asp:HyperLink>
+                          </li>
+                      </ItemTemplate>
+                  </asp:Repeater>
+                 
+             </ul>
+
+            <ul class="nav nav-list" runat="server" id="dvAdminAll" visible="false">
+              <li class="nav-header">All Budget Types</li>
+                 <asp:Repeater ID="rListAdmin" runat="server">
+                      <ItemTemplate>
+                          <li>
+                              <asp:HyperLink ID="lnkmenu" runat="server" NavigateUrl='<%#Eval("Url") %>'><%#Eval("BudgetItem")%></asp:HyperLink>
+                          </li>
+                      </ItemTemplate>
+                  </asp:Repeater>
+                
+            </ul>
+            <ul class="nav nav-list" runat="server" id="dvATCMenu" visible="false">
+                 <li class="nav-header">Authority To Commit(ATC)</li>
+                 <li><a id="A2" href="ATCRequestList.aspx" runat="server">Manage ATC Request</a></li>
+            </ul>
+             <%-- <ul class="nav nav-list" runat="server" id="dvCredit" visible="false">
+              <li class="nav-header">Credit Departments</li>
+              <li><a href="~/RecoveryProjectionPage.aspx"  runat="server">Recovery Projections</a></li>
+              <li><a href="~/RestructureProjectionPage.aspx"  runat="server">Restructure Projections</a></li>
+             </ul>
+              <ul class="nav nav-list" runat="server" id="dvAsset" visible="false">
+              <li class="nav-header">Asset Management Departments</li>
+              <li><a href="DisbursementPro.aspx" runat="server">Disbursement Projection</a></li>
+              <li><a href="~/IncomeProjectionPage.aspx"  runat="server">Inflow Projections</a></li>
+              </ul>
+              <ul class="nav nav-list" runat="server" id="dvFinSer" visible="false">
+               <li class="nav-header">Finance & Corporate Services</li>
+              <li><a href="~/ReinvestmentPage.aspx"  runat="server">Re-investment</a></li>
+             
+            </ul>--%>
+
+            <ul class="nav nav-list" runat="server" id="dvAdmin" visible="false">
+              <li class="nav-header">Administration</li>
+                <%-- <li><a id="A2" href="~/RecoveryProjectionPage.aspx"  runat="server">Recovery Projections</a></li>--%>
+              <li><a href="~/Admin/UserSetup.aspx" runat="server">Manage Users</a></li>
+              <li><a href="~/Admin/ManageDept.aspx"  runat="server">Manage Departments</a></li>
+              <li><a href="~/Admin/LookupForms.aspx"  runat="server">Manage LookUps</a></li>
+               <li><a href="~/Reports/ReportHome.aspx"  runat="server">Reports</a></li>
+             
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+      <footer>
+      <script type="text/javascript">
+          $(document).ready(function () {
+              $(".nav li a").click(function (event) {
+                 // $('.nav li').removeClass('active');
+                  $(this).parent().addClass('active').siblings().removeClass('active')
+                  //$(this).parent().addClass('active');
+              });
+          });
+      </script>
+        <p class="footer">&copy; Nigerian Gas Company Limited (NGC) 2015</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+    
+  </form>
+  <script type="text/javascript">
+      $("[id*=chkHeader]").live("click", function () {
+          var chkHeader = $(this);
+          var grid = $(this).closest("table");
+          $("input[type=checkbox]", grid).each(function () {
+              if (chkHeader.is(":checked")) {
+                  $(this).attr("checked", "checked");
+                  $("td", $(this).closest("tr")).addClass("selected");
+              } else {
+                  $(this).removeAttr("checked");
+                  $("td", $(this).closest("tr")).removeClass("selected");
+              }
+          });
+      });
+      $("[id*=chkRow]").live("click", function () {
+          var grid = $(this).closest("table");
+          var chkHeader = $("[id*=chkHeader]", grid);
+          if (!$(this).is(":checked")) {
+              $("td", $(this).closest("tr")).removeClass("selected");
+              chkHeader.removeAttr("checked");
+          } else {
+              $("td", $(this).closest("tr")).addClass("selected");
+              if ($("[id*=chkRow]", grid).length == $("[id*=chkRow]:checked", grid).length) {
+                  chkHeader.attr("checked", "checked");
+              }
+          }
+      });
+</script>
+
+ <script type="text/javascript" language ="javascript">
+     function Comma(Num) { //function to add commas to textboxes
+         Num += '';
+         Num = Num.replace(',', ''); Num = Num.replace(',', ''); Num = Num.replace(',', '');
+         Num = Num.replace(',', ''); Num = Num.replace(',', ''); Num = Num.replace(',', '');
+         x = Num.split('.');
+         x1 = x[0];
+         x2 = x.length > 1 ? '.' + x[1] : '';
+         var rgx = /(\d+)(\d{3})/;
+         while (rgx.test(x1))
+             x1 = x1.replace(rgx, '$1' + ',' + '$2');
+         return x1 + x2;
+     }
+  </script>
+     <script type="text/javascript">
+         var specialKeys = new Array();
+         specialKeys.push(8); //Backspace
+         $(function () {
+             $(".numeric").bind("keypress", function (e) {
+                 var keyCode = e.which ? e.which : e.keyCode
+                 var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+                 $(".error").css("display", ret ? "none" : "inline");
+                 return ret;
+             });
+             $(".numeric").bind("paste", function (e) {
+                 return false;
+             });
+             $(".numeric").bind("drop", function (e) {
+                 return false;
+             });
+         });
+
+        
+    </script>
+    
+    <SCRIPT type="text/javascript" >
+       <!--
+    function isNumberKey(evt)
+    {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31 
+          && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+    //-->
+    </SCRIPT>
+    
+</body>
+</html>

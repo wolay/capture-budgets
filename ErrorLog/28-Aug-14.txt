@@ -1,0 +1,54 @@
+
+Log Entry : 
+08/28/2014 12:41:19
+Error in: http://localhost:20608/RecoveryProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/28/2014 12:46:42
+Error in: http://localhost:20608/RecoveryProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/28/2014 12:57:43
+Error in: http://localhost:20608/RecoveryProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/28/2014 13:03:43
+Error in: http://localhost:20608/RecoveryProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/28/2014 16:18:02
+Error in: http://localhost:20608/RestructureProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/28/2014 16:19:00
+Error in: http://localhost:20608/RestructureProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/28/2014 16:21:42
+Error in: http://localhost:20608/RestructureProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/28/2014 16:48:53
+Error in: http://localhost:20608/RestructureProjectionPage.aspx. Error Message:Error: Property accessor 'Obligor' on object 'System.Data.Entity.DynamicProxies.RestructureProjectio_D5D7B87B08709F708E37DB96F258A618F52209A8FFCA12F8669956BA225840C7' threw the following exception:'The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.'
+__________________________
+
+Log Entry : 
+08/28/2014 16:50:44
+Error in: http://localhost:20608/RestructureProjectionPage.aspx. Error Message:Error: System.ObjectDisposedException: The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.
+   at System.Data.Entity.Core.Objects.ObjectContext.get_Connection()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.Execute(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Load(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load()
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.DeferredLoad()
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.LoadProperty[TItem](TItem propertyValue, String relationshipName, String targetRoleName, Boolean mustBeNull, Object wrapperObject)
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.<>c__DisplayClass7`2.<GetInterceptorDelegate>b__2(TProxy proxy, TItem item)
+   at System.Data.Entity.DynamicProxies.RestructureProjectio_D5D7B87B08709F708E37DB96F258A618F52209A8FFCA12F8669956BA225840C7.get_Obligor()
+__________________________

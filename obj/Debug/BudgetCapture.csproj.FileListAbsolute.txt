@@ -1,0 +1,26 @@
+c:\users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\bin\BudgetCapture.dll
+c:\users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\bin\BudgetCapture.pdb
+c:\users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\obj\Debug\BudgetCapture.dll
+c:\users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\obj\Debug\BudgetCapture.pdb
+C:\Users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\bin\EntityFramework.dll
+C:\Users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\bin\EntityFramework.SqlServer.dll
+C:\Users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\bin\EntityFramework.xml
+C:\Users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\bin\EntityFramework.SqlServer.xml
+C:\Users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\obj\Debug\BudgetCapture.csprojResolveAssemblyReference.cache
+C:\Users\130288\documents\visual studio 2010\Projects\BudgetCapture\BudgetCapture\bin\AjaxControlToolkit.dll
+C:\Users\130288\Documents\Visual Studio 2010\Projects\BudgetCapture\BudgetCapture\obj\Debug\RdlCompile.cache
+C:\Users\130288\Documents\Visual Studio 2010\Projects\BudgetCapture\BudgetCapture\obj\Debug\RdlCompile.compiled
+D:\TopeCode Backup\BackUps\BudgetCapture_LIVE\bin\BudgetCapture.dll
+D:\TopeCode Backup\BackUps\BudgetCapture_LIVE\bin\BudgetCapture.pdb
+D:\TopeCode Backup\BackUps\BudgetCapture_LIVE\bin\EntityFramework.xml
+D:\TopeCode Backup\BackUps\BudgetCapture_LIVE\obj\Debug\RdlCompile.cache
+D:\TopeCode Backup\BackUps\BudgetCapture_LIVE\obj\Debug\RdlCompile.compiled
+D:\TopeCode Backup\BackUps\BudgetCapture_LIVE\obj\Debug\BudgetCapture.dll
+D:\TopeCode Backup\BackUps\BudgetCapture_LIVE\obj\Debug\BudgetCapture.pdb
+C:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\obj\Debug\RdlCompile.cache
+C:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\obj\Debug\RdlCompile.compiled
+C:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\obj\Debug\BudgetCapture.dll
+C:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\bin\BudgetCapture.dll
+C:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\bin\BudgetCapture.pdb
+C:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\obj\Debug\BudgetCapture.pdb
+C:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\obj\Debug\BudgetCapture.csprojResolveAssemblyReference.cache

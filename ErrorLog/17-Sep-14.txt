@@ -1,0 +1,15 @@
+
+Log Entry : 
+09/17/2014 11:28:18
+Error in: http://localhost:38553/RestructureProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+09/17/2014 11:28:29
+Error in: http://localhost:38553/RestructureProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+09/17/2014 11:29:17
+Error in: http://localhost:38553/RestructureProjectionPage.aspx. Error Message:Error: 
+__________________________

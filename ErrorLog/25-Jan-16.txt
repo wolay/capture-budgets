@@ -1,0 +1,15 @@
+
+Log Entry : 
+01/25/2016 14:10:41
+Error in: http://localhost:61559/Admin/CustomerDetails.aspx?Id=3. Error Message:Error: Data source is an invalid type.  It must be either an IListSource, IEnumerable, or IDataSource.
+__________________________
+
+Log Entry : 
+01/25/2016 16:58:28
+Error in: http://localhost:61559/Admin/CustomerDetails.aspx?Id=3. Error Message:Error: Data source is an invalid type.  It must be either an IListSource, IEnumerable, or IDataSource.
+__________________________
+
+Log Entry : 
+01/25/2016 17:10:36
+Error in: http://localhost:61559/Admin/CustomerDetails.aspx?Id=3. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.GSS_Customer_9ECD99262C89FA2DB6889C668B91BEE413CF81BE94AFAD4BE7E350CF8F7BE55E' does not contain a property with the name 'StaffID'.
+__________________________

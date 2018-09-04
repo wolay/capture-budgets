@@ -1,0 +1,330 @@
+
+Log Entry : 
+09/16/2014 10:56:14
+Error in: http://localhost:23772/Login.aspx. Error Message:Error Msg: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+09/16/2014 10:56:14
+Error in: http://localhost:23772/Login.aspx. Error Message:Error: System.Data.Entity.Core.MappingException: 
+DAL.BudCapture.msl(359,10) : error 3004: Problem in mapping fragments starting at line 359:No mapping specified for properties ExpenseType.DepartmentId in Set ExpenseTypes.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [BudgetCaptureDBModel.ExpenseType]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.<>c__DisplayClass2.<Evaluate>b__0()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ScanTableOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.FilterOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitSortOp(SortBaseOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(ConstrainedSortOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ConstrainedSortOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitPhysicalOpDefault(PhysicalOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(PhysicalProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.PhysicalProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(DbCommandTree ctree, List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)
+__________________________
+
+Log Entry : 
+09/16/2014 10:56:26
+Error in: http://localhost:23772/Login.aspx. Error Message:Error Msg: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+09/16/2014 10:56:26
+Error in: http://localhost:23772/Login.aspx. Error Message:Error: System.Data.Entity.Core.MappingException: 
+DAL.BudCapture.msl(359,10) : error 3004: Problem in mapping fragments starting at line 359:No mapping specified for properties ExpenseType.DepartmentId in Set ExpenseTypes.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [BudgetCaptureDBModel.ExpenseType]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.<>c__DisplayClass2.<Evaluate>b__0()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ScanTableOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.FilterOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitSortOp(SortBaseOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(ConstrainedSortOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ConstrainedSortOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitPhysicalOpDefault(PhysicalOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(PhysicalProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.PhysicalProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(DbCommandTree ctree, List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)
+__________________________
+
+Log Entry : 
+09/16/2014 10:56:36
+Error in: http://localhost:23772/Login.aspx. Error Message:Error Msg: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+09/16/2014 10:56:36
+Error in: http://localhost:23772/Login.aspx. Error Message:Error: System.Data.Entity.Core.MappingException: 
+DAL.BudCapture.msl(359,10) : error 3004: Problem in mapping fragments starting at line 359:No mapping specified for properties ExpenseType.DepartmentId in Set ExpenseTypes.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [BudgetCaptureDBModel.ExpenseType]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.<>c__DisplayClass2.<Evaluate>b__0()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ScanTableOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.FilterOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitSortOp(SortBaseOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(ConstrainedSortOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ConstrainedSortOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitPhysicalOpDefault(PhysicalOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(PhysicalProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.PhysicalProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(DbCommandTree ctree, List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)
+__________________________
+
+Log Entry : 
+09/16/2014 10:56:45
+Error in: http://localhost:23772/Login.aspx. Error Message:Error Msg: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+09/16/2014 10:56:45
+Error in: http://localhost:23772/Login.aspx. Error Message:Error: System.Data.Entity.Core.MappingException: 
+DAL.BudCapture.msl(359,10) : error 3004: Problem in mapping fragments starting at line 359:No mapping specified for properties ExpenseType.DepartmentId in Set ExpenseTypes.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [BudgetCaptureDBModel.ExpenseType]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.<>c__DisplayClass2.<Evaluate>b__0()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ScanTableOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.FilterOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitSortOp(SortBaseOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(ConstrainedSortOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ConstrainedSortOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitPhysicalOpDefault(PhysicalOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(PhysicalProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.PhysicalProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(DbCommandTree ctree, List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)
+__________________________
+
+Log Entry : 
+09/16/2014 10:57:57
+Error in: http://localhost:23772/Login.aspx. Error Message:Error Msg: An error occurred while preparing the command definition. See the inner exception for details.
+__________________________
+
+Log Entry : 
+09/16/2014 10:58:18
+Error in: http://localhost:23772/Login.aspx. Error Message:Error: System.Data.Entity.Core.MappingException: 
+DAL.BudCapture.msl(359,10) : error 3004: Problem in mapping fragments starting at line 359:No mapping specified for properties ExpenseType.DepartmentId in Set ExpenseTypes.
+An Entity with Key (PK) will not round-trip when:
+  Entity is type [BudgetCaptureDBModel.ExpenseType]
+
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGenerateViews(EntityContainerMapping entityContainerMap, Dictionary`2 resultDictionary)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.SerializedGetGeneratedViews(EntityContainer container)
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.<>c__DisplayClass2.<Evaluate>b__0()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Result.GetValue()
+   at System.Data.Entity.Core.Common.Utils.Memoizer`2.Evaluate(TArg arg)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.ViewDictionary.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace, StorageMappingItemCollection storageMappingItemCollection)
+   at System.Data.Entity.Core.Mapping.StorageMappingItemCollection.GetGeneratedView(EntitySetBase extent, MetadataWorkspace workspace)
+   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetGeneratedView(EntitySetBase extent)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ExpandView(ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, IsOfOp& typeFilter)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ScanTableOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ScanTableOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(FilterOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.FilterOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Visit(ProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitRelOpDefault(RelOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitSortOp(SortBaseOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(ConstrainedSortOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.ConstrainedSortOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.SubqueryTrackingVisitor.VisitChildren(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitDefault(Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfNode.VisitPhysicalOpDefault(PhysicalOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.Visit(PhysicalProjectOp op, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.PhysicalProjectOp.Accept[TResultType](BasicOpVisitorOfT`1 v, Node n)
+   at System.Data.Entity.Core.Query.InternalTrees.BasicOpVisitorOfT`1.VisitNode(Node n)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.Process(PlanCompiler planCompilerState, StructuredTypeInfo& typeInfo, Dictionary`2& tvfResultKeys)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Compile(DbCommandTree ctree, List`1& providerCommands, ColumnMap& resultColumnMap, Int32& columnCount, Set`1& entitySets)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)
+__________________________
+
+Log Entry : 
+09/16/2014 11:15:16
+Error in: http://localhost:23772/RecoveryProjectionPage.aspx. Error Message:Error: System.ObjectDisposedException: The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.
+   at System.Data.Entity.Core.Objects.ObjectContext.get_Connection()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.Execute(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Load(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load()
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.DeferredLoad()
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.LoadProperty[TItem](TItem propertyValue, String relationshipName, String targetRoleName, Boolean mustBeNull, Object wrapperObject)
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.<>c__DisplayClass7`2.<GetInterceptorDelegate>b__2(TProxy proxy, TItem item)
+   at System.Data.Entity.DynamicProxies.RecoveryProjection_A1515DFCBD759E2BE2F382FCA6C6B80785C3A53C5EFED9558C1AEF63DAA99C17.get_ObligorType()
+__________________________
+
+Log Entry : 
+09/16/2014 13:23:49
+Error in: http://localhost:38553/RecoveryProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+09/16/2014 13:24:49
+Error in: http://localhost:38553/RecoveryProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+09/16/2014 13:26:51
+Error in: http://localhost:38553/RecoveryProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+09/16/2014 13:43:59
+Error in: http://localhost:38553/RecoveryProjectionPage.aspx. Error Message:Error: 'ddlMonth' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________

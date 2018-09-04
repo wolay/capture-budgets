@@ -1,0 +1,20 @@
+
+Log Entry : 
+12/05/2015 11:48:00
+Error in: http://localhost:61559/Admin/ManageGradeSalElement.aspx. Error Message:Error: DataBinding: 'BudgetCapture.BLL.GradeSalElement' does not contain a property with the name 'ID'.
+__________________________
+
+Log Entry : 
+12/05/2015 12:13:50
+Error in: http://localhost:61559/Admin/ManageDept.aspx. Error Message:Error: DataBinding: 'BudgetCapture.DAL.BudgetMenuItem' does not contain a property with the name 'MenuItemId'.
+__________________________
+
+Log Entry : 
+12/05/2015 12:14:55
+Error in: http://localhost:61559/Admin/ManageDept.aspx. Error Message:Error: DataBinding: 'BudgetCapture.DAL.BudgetMenuItem' does not contain a property with the name 'MenuItemId'.
+__________________________
+
+Log Entry : 
+12/05/2015 17:09:42
+Error in: http://localhost:61559/Admin/ManageAssetType.aspx. Error Message:Error: A field or property with the name 'Code' was not found on the selected data source.
+__________________________

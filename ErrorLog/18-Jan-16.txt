@@ -1,0 +1,90 @@
+
+Log Entry : 
+01/18/2016 12:04:47
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 12:05:34
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 13:40:51
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 13:52:40
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 13:52:52
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 14:24:34
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 14:50:57
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 18:55:56
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 18:56:06
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:04:26
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:04:30
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:04:33
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:04:38
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:12:13
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:12:42
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:14:23
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=14. Error Message:Error: The user '110026' is already not in role 'BudgetInitiator'.
+__________________________
+
+Log Entry : 
+01/18/2016 19:40:30
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/18/2016 19:42:36
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: 
+__________________________

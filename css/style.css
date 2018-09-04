@@ -1,0 +1,250 @@
+﻿ body {
+        padding-top: 116px;
+        padding-bottom: 40px;
+        background:#F1F1F1 !important;
+      }
+      .sidebar-nav {
+        padding: 2px 0;
+      }
+ small
+ {
+     color:Maroon;
+ }
+.nav-header-bg {
+    background:#345523 !important;/*345523*#*/
+     
+    padding-top:4px;
+    padding-bottom:0px;
+}
+.nav-header-bg-login {
+    /*background:#345523 !important;
+    padding:2px;*/
+}
+.container-fluid-fixedwidth {
+    max-width: 1100px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+    
+}
+.navbar-inner-updated {
+    background:#345523 !important;
+}
+.banner {
+    padding:100px;
+    background:#CAE8A2;
+}
+.navbar .brand .appName {
+    font-size:30px;
+    font-weight:700;
+}
+.navbar-link {
+    margin-left:3px;
+   margin-right:3px;
+}
+ .name{
+	display:block;
+	font-size:1.1em;
+	line-height:1em;
+	padding-bottom:-3px;
+}
+.row-fluid-adjusted {
+    background:#fff;
+    max-width:1100px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:10px;
+    padding-right:7px;
+}
+.sidebar-adjusted{
+    margin-left:4px;
+    margin-top:4px;
+    margin-bottom:4px;
+    background:#CAE8A2 !important;
+}
+.nav-list a {
+    color:#515044 !important;
+}
+.nav-list > li > a, .nav-list .nav-header {
+    color:#345523;
+}
+.alert-msg
+{
+    font-size:11px;
+}
+.btn-submit
+{
+    background:#CDD7B6; /*BFCD33,48C445,5A6727*/
+    color:#5A6727;
+}
+.pageheader
+{
+    border-bottom:1px solid #666;
+    padding-bottom:3px;
+    font-size:16px;
+    font-weight:600;
+    margin:10px;
+}
+.pageheader-text
+{
+    padding:10px;
+    margin-right:4px;
+    text-align:center;
+    background:#fff;
+    border-bottom:1px solid #C5B12F;
+    font-size:medium;
+    text-transform:uppercase;
+    /*text-shadow:1px 1px 1px #fff;
+    color:#BFCD33;*/
+    color:#345523;
+    clear:left;
+    font-size:12px;
+}
+.require
+{
+    color:Maroon;
+}
+.boxheader
+{
+    padding:10px;
+}
+.page-body
+{
+    padding: 0px 40px 0px 0px;
+    margin-top:10px;
+    font-size:12px;
+}
+.page-body-wrapper
+{
+    border:1px solid #BFCD33;
+    border-radius:10px;
+    padding-top:10px;
+    margin-bottom:10px;
+    padding-left:0px;
+}
+.page-body .page-body-control
+{
+    padding-top:10px;
+    padding-bottom:10px;
+    
+    margin-top:10px;
+    border:1px solid #BFCD33;
+    border-radius:10px;
+    margin-bottom:10px;
+    overflow:auto;
+}
+.page-body .page-body-controlbtn
+{
+    padding:10px;
+    margin-top:10px;
+    border:1px solid #BFCD33;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+.page-body .page-body-controlbtn h3
+{
+    border-bottom:1px solid #ccc;
+    padding-bottom:0px;
+    margin-top:0px;
+    font-size:14px;
+}
+.page-body .inner-header
+{
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    background-image:url(../img/inner-bg-icon.png);
+    background-repeat:no-repeat;
+    background-position:center left;
+    background-color:#CDD7B6;
+    height:25px;
+    margin:-10px 0px;
+    padding:10px 4px 2px 20px;
+    font-weight:400;
+    margin-bottom:4px;
+    color:#000;
+    font-size:12px;
+    text-indent:5px;
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BFCD33', endColorstr='#9C9432' ,GradientType=0 );  IE6-9 #9C9432'*/
+}
+.lookup 
+{
+    margin-top:2px;
+    padding:4px;
+    
+}
+.lookup ul
+{
+    margin:0px;
+}
+.lookup ul li
+{
+    list-style:none;
+    padding:10px;
+    border-bottom:0px solid #9C9432;
+    
+}
+.lookup ul li:last-child
+{
+    border-bottom:none;
+}
+.lookup ul li a
+{
+    display:block;
+    background:#fff;
+    border:1px solid #9C9432;
+    padding:8px;
+    text-align:left;
+    font-weight:500;
+    color:#9C9432;
+    font-size:medium;
+    text-align:center;
+}
+.legend
+{
+    margin-left:10px;
+    font-size:medium;
+    margin-top:0px;
+}
+ .selected
+    {
+        background-color: #A1DCF2;
+    }
+    .btn-reject
+    {
+        background:#CE512C;
+        color:#fff;
+    }
+.footer{
+    color:#345523;
+    font-weight:300;
+    text-align:center;
+}
+.throbber
+{
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    right: 0px;
+    left:0px;
+    top:50%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    opacity:0.5;
+}
+.throbber img
+{
+    position:absolute;
+    top: 50%;
+    left: 35%;
+    margin-top: -9px;
+    margin-left: 0px;
+    z-index: 2;
+}
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }

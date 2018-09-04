@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Debug</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2015-10-23T15:17:33.3354727+01:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>08/07/2014 08:58:21</publishTime>
+    </File>
+    <File Include="Admin/CustomerDetails.aspx">
+      <publishTime>01/25/2016 23:39:50</publishTime>
+    </File>
+    <File Include="Admin/EmailTemplates/NewUserCreated.htm">
+      <publishTime>08/14/2014 11:46:18</publishTime>
+    </File>
+    <File Include="Admin/GssLookupForm.aspx">
+      <publishTime>01/20/2016 15:57:55</publishTime>
+    </File>
+    <File Include="Admin/LookupForms.aspx">
+      <publishTime>12/09/2015 16:00:18</publishTime>
+    </File>
+    <File Include="Admin/ManageAsset.aspx">
+      <publishTime>12/05/2015 20:34:57</publishTime>
+    </File>
+    <File Include="Admin/ManageAssetType.aspx">
+      <publishTime>12/05/2015 17:29:05</publishTime>
+    </File>
+    <File Include="Admin/ManageBudgetYr.aspx">
+      <publishTime>12/05/2015 09:02:22</publishTime>
+    </File>
+    <File Include="Admin/ManageCapexItem.aspx">
+      <publishTime>12/07/2015 18:01:17</publishTime>
+    </File>
+    <File Include="Admin/ManageCapexType.aspx">
+      <publishTime>12/07/2015 17:09:42</publishTime>
+    </File>
+    <File Include="Admin/ManageCustomer.aspx">
+      <publishTime>12/09/2015 16:08:53</publishTime>
+    </File>
+    <File Include="Admin/ManageCustomerType.aspx">
+      <publishTime>01/20/2016 16:25:51</publishTime>
+    </File>
+    <File Include="Admin/ManageDept.aspx">
+      <publishTime>02/04/2016 16:02:30</publishTime>
+    </File>
+    <File Include="Admin/ManageDirectExpenseItem.aspx">
+      <publishTime>12/07/2015 14:33:24</publishTime>
+    </File>
+    <File Include="Admin/ManageDirectorate.aspx">
+      <publishTime>12/05/2015 09:02:22</publishTime>
+    </File>
+    <File Include="Admin/ManageDirectType.aspx">
+      <publishTime>12/07/2015 17:57:26</publishTime>
+    </File>
+    <File Include="Admin/ManageGrades.aspx">
+      <publishTime>12/05/2015 09:02:22</publishTime>
+    </File>
+    <File Include="Admin/ManageGradeSalElement.aspx">
+      <publishTime>12/05/2015 11:53:59</publishTime>
+    </File>
+    <File Include="Admin/ManageGssCustomer.aspx">
+      <publishTime>01/26/2016 19:51:37</publishTime>
+    </File>
+    <File Include="Admin/ManageIndirectItem.aspx">
+      <publishTime>12/07/2015 14:33:59</publishTime>
+    </File>
+    <File Include="Admin/ManageIndirectType.aspx">
+      <publishTime>12/06/2015 22:16:50</publishTime>
+    </File>
+    <File Include="Admin/ManagePipelineSection.aspx">
+      <publishTime>01/20/2016 19:15:31</publishTime>
+    </File>
+    <File Include="Admin/ManageSalaryCategory.aspx">
+      <publishTime>12/05/2015 09:02:22</publishTime>
+    </File>
+    <File Include="Admin/ManageSalaryElement.aspx">
+      <publishTime>12/05/2015 11:46:29</publishTime>
+    </File>
+    <File Include="Admin/SetupCustomer.aspx">
+      <publishTime>01/25/2016 23:32:40</publishTime>
+    </File>
+    <File Include="Admin/UserDetail.aspx">
+      <publishTime>01/28/2016 04:02:06</publishTime>
+    </File>
+    <File Include="Admin/UserSetup.aspx">
+      <publishTime>01/28/2016 04:01:21</publishTime>
+    </File>
+    <File Include="ATCRequestList.aspx">
+      <publishTime>05/05/2016 16:48:28</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>05/12/2010 11:24:02</publishTime>
+    </File>
+    <File Include="bin/BudgetCapture.dll">
+      <publishTime>08/22/2016 13:59:54</publishTime>
+    </File>
+    <File Include="bin/BudgetCapture.pdb">
+      <publishTime>08/22/2016 13:59:54</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/14/2014 08:02:29</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>08/14/2014 08:02:30</publishTime>
+    </File>
+    <File Include="CapexBudgetPg.aspx">
+      <publishTime>05/05/2016 08:37:53</publishTime>
+    </File>
+    <File Include="css/bootstrap-responsive.css">
+      <publishTime>08/07/2014 09:06:32</publishTime>
+    </File>
+    <File Include="css/bootstrap-responsive.min.css">
+      <publishTime>08/07/2014 09:06:32</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>08/07/2014 09:06:32</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>08/07/2014 09:06:32</publishTime>
+    </File>
+    <File Include="css/ModelPopup.css">
+      <publishTime>08/25/2014 09:38:57</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>12/08/2015 18:52:48</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>05/05/2016 16:17:56</publishTime>
+    </File>
+    <File Include="DirectBudgetPg.aspx">
+      <publishTime>05/04/2016 19:56:26</publishTime>
+    </File>
+    <File Include="EmailTemplates/ApproveBudget.htm">
+      <publishTime>01/11/2016 11:29:56</publishTime>
+    </File>
+    <File Include="EmailTemplates/ATCApproval.htm">
+      <publishTime>01/16/2016 10:58:47</publishTime>
+    </File>
+    <File Include="EmailTemplates/ATCApprovalNotification.htm">
+      <publishTime>01/16/2016 14:16:30</publishTime>
+    </File>
+    <File Include="EmailTemplates/RejectBudget.htm">
+      <publishTime>05/04/2016 20:13:21</publishTime>
+    </File>
+    <File Include="EmailTemplates/ReturnATCRequest.htm">
+      <publishTime>01/16/2016 15:27:42</publishTime>
+    </File>
+    <File Include="EmailTemplates/ReturnBudget.htm">
+      <publishTime>09/18/2014 09:59:26</publishTime>
+    </File>
+    <File Include="ExistingStaffpg.aspx">
+      <publishTime>05/05/2016 14:34:12</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>08/07/2014 09:11:39</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/07/2014 08:58:21</publishTime>
+    </File>
+    <File Include="GSS/ApproveCertifiedVolume.aspx">
+      <publishTime>01/28/2016 18:39:43</publishTime>
+    </File>
+    <File Include="GSS/CaptureGasSales.aspx">
+      <publishTime>01/28/2016 18:39:43</publishTime>
+    </File>
+    <File Include="GSS/CertifySaleVolume.aspx">
+      <publishTime>01/28/2016 18:21:05</publishTime>
+    </File>
+    <File Include="GSS/ManageCertifiedSalesVolume.aspx">
+      <publishTime>02/01/2016 08:41:23</publishTime>
+    </File>
+    <File Include="GSS/PendingCapturedGasSales.aspx">
+      <publishTime>01/28/2016 13:10:17</publishTime>
+    </File>
+    <File Include="GssHome.aspx">
+      <publishTime>01/28/2016 21:46:08</publishTime>
+    </File>
+    <File Include="img/AmconLogoTrans.png">
+      <publishTime>09/04/2014 10:20:49</publishTime>
+    </File>
+    <File Include="img/budget-smart.png">
+      <publishTime>08/22/2014 10:03:10</publishTime>
+    </File>
+    <File Include="img/budget-smart2.png">
+      <publishTime>08/14/2014 17:28:25</publishTime>
+    </File>
+    <File Include="img/cal.gif">
+      <publishTime>08/24/2014 13:29:37</publishTime>
+    </File>
+    <File Include="img/delete-icon.png">
+      <publishTime>08/18/2014 15:37:00</publishTime>
+    </File>
+    <File Include="img/edit_icon.png">
+      <publishTime>08/15/2014 10:21:11</publishTime>
+    </File>
+    <File Include="img/inner-bg-icon.png">
+      <publishTime>08/14/2014 12:06:36</publishTime>
+    </File>
+    <File Include="img/loadinfo.GIF">
+      <publishTime>09/16/2014 12:13:06</publishTime>
+    </File>
+    <File Include="img/loadinfo2.gif">
+      <publishTime>09/16/2014 12:13:06</publishTime>
+    </File>
+    <File Include="img/ngclogo.jpg">
+      <publishTime>12/08/2015 18:42:10</publishTime>
+    </File>
+    <File Include="img/ngclogo.png">
+      <publishTime>02/23/2016 14:41:44</publishTime>
+    </File>
+    <File Include="img/view_icon.png">
+      <publishTime>08/14/2014 12:06:05</publishTime>
+    </File>
+    <File Include="IndirectBudgetPg.aspx">
+      <publishTime>05/05/2016 14:24:57</publishTime>
+    </File>
+    <File Include="js/action.js">
+      <publishTime>08/18/2014 13:27:16</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>08/07/2014 09:06:58</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>08/07/2014 09:06:58</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>02/15/2016 16:13:20</publishTime>
+    </File>
+    <File Include="MovableAsset.aspx">
+      <publishTime>05/05/2016 14:16:26</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/14/2014 08:02:44</publishTime>
+    </File>
+    <File Include="Reports/ATCRequestProRpt.aspx">
+      <publishTime>02/12/2016 15:24:03</publishTime>
+    </File>
+    <File Include="Reports/CapexATCProRpt.aspx">
+      <publishTime>02/14/2016 19:05:28</publishTime>
+    </File>
+    <File Include="Reports/CapexProRpt.aspx">
+      <publishTime>02/14/2016 18:55:04</publishTime>
+    </File>
+    <File Include="Reports/DirectProATCRpt.aspx">
+      <publishTime>02/14/2016 20:47:16</publishTime>
+    </File>
+    <File Include="Reports/DirectProRpt.aspx">
+      <publishTime>02/11/2016 19:15:01</publishTime>
+    </File>
+    <File Include="Reports/DirectPro_ED.aspx">
+      <publishTime>12/10/2015 12:52:05</publishTime>
+    </File>
+    <File Include="Reports/ExistingStaffATCRpt.aspx">
+      <publishTime>02/14/2016 20:40:34</publishTime>
+    </File>
+    <File Include="Reports/ExistingStaffRpt.aspx">
+      <publishTime>02/12/2016 12:12:54</publishTime>
+    </File>
+    <File Include="Reports/ExStaffRpt_ED.aspx">
+      <publishTime>12/10/2015 09:07:18</publishTime>
+    </File>
+    <File Include="Reports/IndirectProATCRpt.aspx">
+      <publishTime>02/14/2016 20:47:45</publishTime>
+    </File>
+    <File Include="Reports/IndirectProRpt.aspx">
+      <publishTime>02/11/2016 19:12:57</publishTime>
+    </File>
+    <File Include="Reports/MovableProATCRpt.aspx">
+      <publishTime>02/14/2016 19:47:49</publishTime>
+    </File>
+    <File Include="Reports/MovableRpt.aspx">
+      <publishTime>02/11/2016 19:21:58</publishTime>
+    </File>
+    <File Include="Reports/MovableRpt_ED.aspx">
+      <publishTime>12/10/2015 08:59:56</publishTime>
+    </File>
+    <File Include="Reports/NewHireRpt.aspx">
+      <publishTime>09/03/2014 15:04:20</publishTime>
+    </File>
+    <File Include="Reports/NewHireRpt_ED.aspx">
+      <publishTime>09/12/2014 09:00:41</publishTime>
+    </File>
+    <File Include="Reports/ReportHome.aspx">
+      <publishTime>02/14/2016 20:50:15</publishTime>
+    </File>
+    <File Include="Reports/RevenueProRpt.aspx">
+      <publishTime>02/12/2016 11:32:21</publishTime>
+    </File>
+    <File Include="RevenueProjectionPage.aspx">
+      <publishTime>05/04/2016 19:24:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.intellisense.js">
+      <publishTime>08/07/2014 09:08:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.js">
+      <publishTime>08/07/2014 09:08:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.min.js">
+      <publishTime>08/07/2014 09:08:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.3.min.js">
+      <publishTime>08/19/2014 12:18:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.js">
+      <publishTime>08/07/2014 09:08:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.min.js">
+      <publishTime>08/07/2014 09:08:12</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>08/07/2014 09:08:12</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>08/07/2014 09:08:12</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>02/15/2016 16:09:08</publishTime>
+    </File>
+    <File Include="SiteGSS.Master">
+      <publishTime>02/05/2016 09:54:31</publishTime>
+    </File>
+    <File Include="Styles/Site.css">
+      <publishTime>12/05/2015 12:41:09</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/22/2016 14:00:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

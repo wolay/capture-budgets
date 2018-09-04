@@ -1,0 +1,70 @@
+
+Log Entry : 
+02/08/2016 12:59:14
+Error in: http://localhost:61559/MovableAsset.aspx. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.AssetBudget_B787A3B50E5E4ADE8DB93A558CD51708BE0D513ABE6C1B3ED197B446F71297B5' does not contain a property with the name 'Amount'.
+__________________________
+
+Log Entry : 
+02/08/2016 13:01:49
+Error in: http://localhost:61559/MovableAsset.aspx. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.AssetBudget_B787A3B50E5E4ADE8DB93A558CD51708BE0D513ABE6C1B3ED197B446F71297B5' does not contain a property with the name 'Amount'.
+__________________________
+
+Log Entry : 
+02/08/2016 16:34:57
+Error in: http://localhost:61559/MovableAsset.aspx. Error Message:Error: Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+02/08/2016 16:39:13
+Error in: http://localhost:61559/MovableAsset.aspx. Error Message:Error: Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+02/08/2016 16:42:33
+Error in: http://localhost:61559/MovableAsset.aspx. Error Message:Error: Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+02/08/2016 19:15:24
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/08/2016 19:15:24
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/08/2016 19:15:24
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/08/2016 19:19:26
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/08/2016 19:19:27
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/08/2016 19:19:30
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/08/2016 19:29:08
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+02/08/2016 19:31:22
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: Object reference not set to an instance of an object.
+__________________________
+
+Log Entry : 
+02/08/2016 19:38:11
+Error in: http://localhost:61559/ExistingStaffpg.aspx. Error Message:Error: The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.
+__________________________

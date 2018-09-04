@@ -1,0 +1,50 @@
+
+Log Entry : 
+08/26/2014 11:38:13
+Error in: http://localhost:20608/ExpenseProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 11:43:48
+Error in: http://localhost:20608/Login.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 11:43:53
+Error in: http://localhost:20608/Login.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 11:44:09
+Error in: http://localhost:20608/Login.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 11:44:33
+Error in: http://localhost:20608/Login.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 11:46:42
+Error in: http://localhost:20608/Login.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 11:49:46
+Error in: http://localhost:20608/ExpenseProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 11:49:47
+Error in: http://localhost:20608/ExpenseProjectionPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 17:05:09
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/26/2014 17:12:24
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: Object reference not set to an instance of an object.
+__________________________

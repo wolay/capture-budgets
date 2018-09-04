@@ -1,0 +1,10 @@
+
+Log Entry : 
+12/09/2015 14:44:04
+Error in: http://localhost:61559/Admin/ManageCustomerType.aspx. Error Message:Error: DataBinding: 'BudgetCapture.DAL.CustomerType' does not contain a property with the name 'RecoveryType'.
+__________________________
+
+Log Entry : 
+12/09/2015 17:47:17
+Error in: http://localhost:61559/RevenueProjectionPage.aspx. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.RevenueProjection_EAEBB4FF3E067FEB35C9E54F60C649A1F4E473729F3A3DA9EF98FFF9766B064D' does not contain a property with the name 'LoanType'.
+__________________________

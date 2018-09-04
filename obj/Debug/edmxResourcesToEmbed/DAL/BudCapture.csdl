@@ -1,0 +1,1641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BudgetCaptureDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BudgetCaptureDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BudgetYears" EntityType="BudgetCaptureDBModel.BudgetYear" />
+    <EntitySet Name="Departments" EntityType="BudgetCaptureDBModel.Department" />
+    <EntitySet Name="Directorates" EntityType="BudgetCaptureDBModel.Directorate" />
+    <EntitySet Name="ExistingStaffs" EntityType="BudgetCaptureDBModel.ExistingStaff" />
+    <EntitySet Name="Grades" EntityType="BudgetCaptureDBModel.Grade" />
+    <EntitySet Name="ListedSecurities" EntityType="BudgetCaptureDBModel.ListedSecurity" />
+    <EntitySet Name="MonthOfYears" EntityType="BudgetCaptureDBModel.MonthOfYear" />
+    <EntitySet Name="Properties" EntityType="BudgetCaptureDBModel.Property" />
+    <AssociationSet Name="FK_ListedSecurity_BudgetYear" Association="BudgetCaptureDBModel.FK_ListedSecurity_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="ListedSecurity" EntitySet="ListedSecurities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Property_BudgetYear" Association="BudgetCaptureDBModel.FK_Property_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Directorate_Department" Association="BudgetCaptureDBModel.FK_Directorate_Department">
+      <End Role="Directorate" EntitySet="Directorates" />
+      <End Role="Department" EntitySet="Departments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExistingStaff_Department" Association="BudgetCaptureDBModel.FK_ExistingStaff_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="ExistingStaff" EntitySet="ExistingStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExistingStaff_Grade" Association="BudgetCaptureDBModel.FK_ExistingStaff_Grade">
+      <End Role="Grade" EntitySet="Grades" />
+      <End Role="ExistingStaff" EntitySet="ExistingStaffs" />
+    </AssociationSet>
+    <EntitySet Name="AppUsers" EntityType="BudgetCaptureDBModel.AppUser" />
+    <AssociationSet Name="FK_AppUser_Department" Association="BudgetCaptureDBModel.FK_AppUser_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="AppUser" EntitySet="AppUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExistingStaff_BudgetYear" Association="BudgetCaptureDBModel.FK_ExistingStaff_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="ExistingStaff" EntitySet="ExistingStaffs" />
+    </AssociationSet>
+    <EntitySet Name="ExpenseProjections" EntityType="BudgetCaptureDBModel.ExpenseProjection" />
+    <AssociationSet Name="FK_ExpenseProjection_BudgetYear" Association="BudgetCaptureDBModel.FK_ExpenseProjection_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="ExpenseProjection" EntitySet="ExpenseProjections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseProjection_Department" Association="BudgetCaptureDBModel.FK_ExpenseProjection_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="ExpenseProjection" EntitySet="ExpenseProjections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseProjection_MonthOfYear" Association="BudgetCaptureDBModel.FK_ExpenseProjection_MonthOfYear">
+      <End Role="MonthOfYear" EntitySet="MonthOfYears" />
+      <End Role="ExpenseProjection" EntitySet="ExpenseProjections" />
+    </AssociationSet>
+    <EntitySet Name="Assets" EntityType="BudgetCaptureDBModel.Asset" />
+    <EntitySet Name="AssetBudgets" EntityType="BudgetCaptureDBModel.AssetBudget" />
+    <EntitySet Name="AssetTypes" EntityType="BudgetCaptureDBModel.AssetType" />
+    <AssociationSet Name="FK_Asset_AssetType" Association="BudgetCaptureDBModel.FK_Asset_AssetType">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="Asset" EntitySet="Assets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBudget_Asset" Association="BudgetCaptureDBModel.FK_AssetBudget_Asset">
+      <End Role="Asset" EntitySet="Assets" />
+      <End Role="AssetBudget" EntitySet="AssetBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBudget_BudgetYear" Association="BudgetCaptureDBModel.FK_AssetBudget_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="AssetBudget" EntitySet="AssetBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBudget_Department" Association="BudgetCaptureDBModel.FK_AssetBudget_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="AssetBudget" EntitySet="AssetBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBudget_MonthOfYear" Association="BudgetCaptureDBModel.FK_AssetBudget_MonthOfYear">
+      <End Role="MonthOfYear" EntitySet="MonthOfYears" />
+      <End Role="AssetBudget" EntitySet="AssetBudgets" />
+    </AssociationSet>
+    <EntitySet Name="BudgetSummaryViews" EntityType="BudgetCaptureDBModel.BudgetSummaryView" />
+    <AssociationSet Name="FK_BudgetSummaryView_BudgetYear" Association="BudgetCaptureDBModel.FK_BudgetSummaryView_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="BudgetSummaryView" EntitySet="BudgetSummaryViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BudgetSummaryView_Department" Association="BudgetCaptureDBModel.FK_BudgetSummaryView_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="BudgetSummaryView" EntitySet="BudgetSummaryViews" />
+    </AssociationSet>
+    <EntitySet Name="ExpenseTypes" EntityType="BudgetCaptureDBModel.ExpenseType" />
+    <AssociationSet Name="FK_ExpenseProjection_ExpenseType" Association="BudgetCaptureDBModel.FK_ExpenseProjection_ExpenseType">
+      <End Role="ExpenseType" EntitySet="ExpenseTypes" />
+      <End Role="ExpenseProjection" EntitySet="ExpenseProjections" />
+    </AssociationSet>
+    <EntitySet Name="BudgetMenuItems" EntityType="BudgetCaptureDBModel.BudgetMenuItem" />
+    <EntitySet Name="DepartmentBudgetMenus" EntityType="BudgetCaptureDBModel.DepartmentBudgetMenu" />
+    <EntitySet Name="GradeSalaryElements" EntityType="BudgetCaptureDBModel.GradeSalaryElement" />
+    <EntitySet Name="SalaryElements" EntityType="BudgetCaptureDBModel.SalaryElement" />
+    <EntitySet Name="SalBenCategories" EntityType="BudgetCaptureDBModel.SalBenCategory" />
+    <AssociationSet Name="FK_GradeSalaryElement_GradeSalaryElement" Association="BudgetCaptureDBModel.FK_GradeSalaryElement_GradeSalaryElement">
+      <End Role="GradeSalaryElement" EntitySet="GradeSalaryElements" />
+      <End Role="GradeSalaryElement1" EntitySet="GradeSalaryElements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalaryElement_SalBenCategory" Association="BudgetCaptureDBModel.FK_SalaryElement_SalBenCategory">
+      <End Role="SalBenCategory" EntitySet="SalBenCategories" />
+      <End Role="SalaryElement" EntitySet="SalaryElements" />
+    </AssociationSet>
+    <EntitySet Name="IndirectTypes" EntityType="BudgetCaptureDBModel.IndirectType" />
+    <EntitySet Name="IndirectBudgetItems" EntityType="BudgetCaptureDBModel.IndirectBudgetItem" />
+    <AssociationSet Name="FK_IndirectBudgetItem_IndirectType" Association="BudgetCaptureDBModel.FK_IndirectBudgetItem_IndirectType">
+      <End Role="IndirectType" EntitySet="IndirectTypes" />
+      <End Role="IndirectBudgetItem" EntitySet="IndirectBudgetItems" />
+    </AssociationSet>
+    <EntitySet Name="IndirectBudgets" EntityType="BudgetCaptureDBModel.IndirectBudget" />
+    <AssociationSet Name="FK_IndirectBudget_BudgetYear" Association="BudgetCaptureDBModel.FK_IndirectBudget_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="IndirectBudget" EntitySet="IndirectBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IndirectBudget_Department" Association="BudgetCaptureDBModel.FK_IndirectBudget_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="IndirectBudget" EntitySet="IndirectBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IndirectBudget_IndirectBudgetItem" Association="BudgetCaptureDBModel.FK_IndirectBudget_IndirectBudgetItem">
+      <End Role="IndirectBudgetItem" EntitySet="IndirectBudgetItems" />
+      <End Role="IndirectBudget" EntitySet="IndirectBudgets" />
+    </AssociationSet>
+    <EntitySet Name="DirectBudgets" EntityType="BudgetCaptureDBModel.DirectBudget" />
+    <EntitySet Name="DirectExpenseItems" EntityType="BudgetCaptureDBModel.DirectExpenseItem" />
+    <EntitySet Name="DirectTypes" EntityType="BudgetCaptureDBModel.DirectType" />
+    <AssociationSet Name="FK_DirectBudget_BudgetYear" Association="BudgetCaptureDBModel.FK_DirectBudget_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="DirectBudget" EntitySet="DirectBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DirectBudget_Department" Association="BudgetCaptureDBModel.FK_DirectBudget_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="DirectBudget" EntitySet="DirectBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DirectBudget_DirectExpenseItem" Association="BudgetCaptureDBModel.FK_DirectBudget_DirectExpenseItem">
+      <End Role="DirectExpenseItem" EntitySet="DirectExpenseItems" />
+      <End Role="DirectBudget" EntitySet="DirectBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DirectExpenseItem_DirectType" Association="BudgetCaptureDBModel.FK_DirectExpenseItem_DirectType">
+      <End Role="DirectType" EntitySet="DirectTypes" />
+      <End Role="DirectExpenseItem" EntitySet="DirectExpenseItems" />
+    </AssociationSet>
+    <EntitySet Name="CapexBudgets" EntityType="BudgetCaptureDBModel.CapexBudget" />
+    <EntitySet Name="CapexExpenseItems" EntityType="BudgetCaptureDBModel.CapexExpenseItem" />
+    <EntitySet Name="CapexTypes" EntityType="BudgetCaptureDBModel.CapexType" />
+    <AssociationSet Name="FK_CapexBudget_BudgetYear" Association="BudgetCaptureDBModel.FK_CapexBudget_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="CapexBudget" EntitySet="CapexBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CapexBudget_CapexExpenseItem" Association="BudgetCaptureDBModel.FK_CapexBudget_CapexExpenseItem">
+      <End Role="CapexExpenseItem" EntitySet="CapexExpenseItems" />
+      <End Role="CapexBudget" EntitySet="CapexBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CapexBudget_Department" Association="BudgetCaptureDBModel.FK_CapexBudget_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="CapexBudget" EntitySet="CapexBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CapexExpenseItem_CapexType" Association="BudgetCaptureDBModel.FK_CapexExpenseItem_CapexType">
+      <End Role="CapexType" EntitySet="CapexTypes" />
+      <End Role="CapexExpenseItem" EntitySet="CapexExpenseItems" />
+    </AssociationSet>
+    <EntitySet Name="CustomerTypes" EntityType="BudgetCaptureDBModel.CustomerType" />
+    <EntitySet Name="Customers" EntityType="BudgetCaptureDBModel.Customer" />
+    <AssociationSet Name="FK_Customer_CustomerType" Association="BudgetCaptureDBModel.FK_Customer_CustomerType">
+      <End Role="CustomerType" EntitySet="CustomerTypes" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <EntitySet Name="RevenueProjections" EntityType="BudgetCaptureDBModel.RevenueProjection" />
+    <AssociationSet Name="FK_RevenueProjection_BudgetYear" Association="BudgetCaptureDBModel.FK_RevenueProjection_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="RevenueProjection" EntitySet="RevenueProjections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RevenueProjection_CustomerType" Association="BudgetCaptureDBModel.FK_RevenueProjection_CustomerType">
+      <End Role="CustomerType" EntitySet="CustomerTypes" />
+      <End Role="RevenueProjection" EntitySet="RevenueProjections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RevenueProjection_Department" Association="BudgetCaptureDBModel.FK_RevenueProjection_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="RevenueProjection" EntitySet="RevenueProjections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RevenueProjection_monthProjection" Association="BudgetCaptureDBModel.FK_RevenueProjection_monthProjection">
+      <End Role="MonthOfYear" EntitySet="MonthOfYears" />
+      <End Role="RevenueProjection" EntitySet="RevenueProjections" />
+    </AssociationSet>
+    <EntitySet Name="TrackApprovals" EntityType="BudgetCaptureDBModel.TrackApproval" />
+    <EntitySet Name="ATCRequestHeaders" EntityType="BudgetCaptureDBModel.ATCRequestHeader" />
+    <AssociationSet Name="FK_ATCRequestHeader_BudgetMenuItem" Association="BudgetCaptureDBModel.FK_ATCRequestHeader_BudgetMenuItem">
+      <End Role="BudgetMenuItem" EntitySet="BudgetMenuItems" />
+      <End Role="ATCRequestHeader" EntitySet="ATCRequestHeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ATCRequestHeader_BudgetYear" Association="BudgetCaptureDBModel.FK_ATCRequestHeader_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="ATCRequestHeader" EntitySet="ATCRequestHeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ATCRequestHeader_Department" Association="BudgetCaptureDBModel.FK_ATCRequestHeader_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="ATCRequestHeader" EntitySet="ATCRequestHeaders" />
+    </AssociationSet>
+    <EntitySet Name="GSS_Invoice" EntityType="BudgetCaptureDBModel.GSS_Invoice" />
+    <EntitySet Name="GSS_PipelineSection" EntityType="BudgetCaptureDBModel.GSS_PipelineSection" />
+    <EntitySet Name="GSS_SalesTbl" EntityType="BudgetCaptureDBModel.GSS_SalesTbl" />
+    <AssociationSet Name="FK_GSS_Invoice_GSS_Invoice" Association="BudgetCaptureDBModel.FK_GSS_Invoice_GSS_Invoice">
+      <End Role="AppUser" EntitySet="AppUsers" />
+      <End Role="GSS_Invoice" EntitySet="GSS_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_SalesTbl_AppUser" Association="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser">
+      <End Role="AppUser" EntitySet="AppUsers" />
+      <End Role="GSS_SalesTbl" EntitySet="GSS_SalesTbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_SalesTbl_AppUser1" Association="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser1">
+      <End Role="AppUser" EntitySet="AppUsers" />
+      <End Role="GSS_SalesTbl" EntitySet="GSS_SalesTbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_SalesTbl_AppUser2" Association="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser2">
+      <End Role="AppUser" EntitySet="AppUsers" />
+      <End Role="GSS_SalesTbl" EntitySet="GSS_SalesTbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_SalesTbl_AppUser3" Association="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser3">
+      <End Role="AppUser" EntitySet="AppUsers" />
+      <End Role="GSS_SalesTbl" EntitySet="GSS_SalesTbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_SalesTbl_AppUser4" Association="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser4">
+      <End Role="AppUser" EntitySet="AppUsers" />
+      <End Role="GSS_SalesTbl" EntitySet="GSS_SalesTbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_Invoice_BudgetYear" Association="BudgetCaptureDBModel.FK_GSS_Invoice_BudgetYear">
+      <End Role="BudgetYear" EntitySet="BudgetYears" />
+      <End Role="GSS_Invoice" EntitySet="GSS_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_Invoice_MonthOfYear" Association="BudgetCaptureDBModel.FK_GSS_Invoice_MonthOfYear">
+      <End Role="MonthOfYear" EntitySet="MonthOfYears" />
+      <End Role="GSS_Invoice" EntitySet="GSS_Invoice" />
+    </AssociationSet>
+    <EntitySet Name="GSS_Customer" EntityType="BudgetCaptureDBModel.GSS_Customer" />
+    <AssociationSet Name="FK_GSS_Customer_GSS_CustomerType" Association="BudgetCaptureDBModel.FK_GSS_Customer_GSS_CustomerType">
+      <End Role="CustomerType" EntitySet="CustomerTypes" />
+      <End Role="GSS_Customer" EntitySet="GSS_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_Customer_GSS_PipelineSection" Association="BudgetCaptureDBModel.FK_GSS_Customer_GSS_PipelineSection">
+      <End Role="GSS_PipelineSection" EntitySet="GSS_PipelineSection" />
+      <End Role="GSS_Customer" EntitySet="GSS_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_Invoice_GSS_Customer" Association="BudgetCaptureDBModel.FK_GSS_Invoice_GSS_Customer">
+      <End Role="GSS_Customer" EntitySet="GSS_Customer" />
+      <End Role="GSS_Invoice" EntitySet="GSS_Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GSS_SalesTbl_GSS_Customer" Association="BudgetCaptureDBModel.FK_GSS_SalesTbl_GSS_Customer">
+      <End Role="GSS_Customer" EntitySet="GSS_Customer" />
+      <End Role="GSS_SalesTbl" EntitySet="GSS_SalesTbl" />
+    </AssociationSet>
+    <EntitySet Name="IndirectBudgetATCs" EntityType="BudgetCaptureDBModel.IndirectBudgetATC" />
+    <AssociationSet Name="FK_IndirectBudgetATC_Department" Association="BudgetCaptureDBModel.FK_IndirectBudgetATC_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="IndirectBudgetATC" EntitySet="IndirectBudgetATCs" />
+    </AssociationSet>
+    <EntitySet Name="DirectBudgetATCs" EntityType="BudgetCaptureDBModel.DirectBudgetATC" />
+    <AssociationSet Name="FK_DirectBudgetATC_Department" Association="BudgetCaptureDBModel.FK_DirectBudgetATC_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="DirectBudgetATC" EntitySet="DirectBudgetATCs" />
+    </AssociationSet>
+    <EntitySet Name="AssetBudgetATCs" EntityType="BudgetCaptureDBModel.AssetBudgetATC" />
+    <AssociationSet Name="FK_AssetBudgetATC_Department" Association="BudgetCaptureDBModel.FK_AssetBudgetATC_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="AssetBudgetATC" EntitySet="AssetBudgetATCs" />
+    </AssociationSet>
+    <EntitySet Name="CapexBudgetATCs" EntityType="BudgetCaptureDBModel.CapexBudgetATC" />
+    <AssociationSet Name="FK_CapexBudgetATC_Department" Association="BudgetCaptureDBModel.FK_CapexBudgetATC_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="CapexBudgetATC" EntitySet="CapexBudgetATCs" />
+    </AssociationSet>
+    <EntitySet Name="ExistingStaffBudgetATCs" EntityType="BudgetCaptureDBModel.ExistingStaffBudgetATC" />
+    <AssociationSet Name="FK_ExistingStaffBudgetATC_Department" Association="BudgetCaptureDBModel.FK_ExistingStaffBudgetATC_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="ExistingStaffBudgetATC" EntitySet="ExistingStaffBudgetATCs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BudgetYear">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="ListedSecurities" Relationship="BudgetCaptureDBModel.FK_ListedSecurity_BudgetYear" FromRole="BudgetYear" ToRole="ListedSecurity" />
+    <NavigationProperty Name="Properties" Relationship="BudgetCaptureDBModel.FK_Property_BudgetYear" FromRole="BudgetYear" ToRole="Property" />
+    <Property Type="DateTime" Name="StartDate" Precision="3" />
+    <Property Type="DateTime" Name="EndDate" Precision="3" />
+    <Property Type="Boolean" Name="IsActive" />
+    <NavigationProperty Name="ExistingStaffs" Relationship="BudgetCaptureDBModel.FK_ExistingStaff_BudgetYear" FromRole="BudgetYear" ToRole="ExistingStaff" />
+    <NavigationProperty Name="ExpenseProjections" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_BudgetYear" FromRole="BudgetYear" ToRole="ExpenseProjection" />
+    <NavigationProperty Name="AssetBudgets" Relationship="BudgetCaptureDBModel.FK_AssetBudget_BudgetYear" FromRole="BudgetYear" ToRole="AssetBudget" />
+    <NavigationProperty Name="BudgetSummaryViews" Relationship="BudgetCaptureDBModel.FK_BudgetSummaryView_BudgetYear" FromRole="BudgetYear" ToRole="BudgetSummaryView" />
+    <NavigationProperty Name="IndirectBudgets" Relationship="BudgetCaptureDBModel.FK_IndirectBudget_BudgetYear" FromRole="BudgetYear" ToRole="IndirectBudget" />
+    <NavigationProperty Name="DirectBudgets" Relationship="BudgetCaptureDBModel.FK_DirectBudget_BudgetYear" FromRole="BudgetYear" ToRole="DirectBudget" />
+    <NavigationProperty Name="CapexBudgets" Relationship="BudgetCaptureDBModel.FK_CapexBudget_BudgetYear" FromRole="BudgetYear" ToRole="CapexBudget" />
+    <NavigationProperty Name="RevenueProjections" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_BudgetYear" FromRole="BudgetYear" ToRole="RevenueProjection" />
+    <NavigationProperty Name="ATCRequestHeaders" Relationship="BudgetCaptureDBModel.FK_ATCRequestHeader_BudgetYear" FromRole="BudgetYear" ToRole="ATCRequestHeader" />
+    <NavigationProperty Name="GSS_Invoice" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_BudgetYear" FromRole="BudgetYear" ToRole="GSS_Invoice" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="Code" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DirectorateID" Type="Int32" />
+    <NavigationProperty Name="Directorate" Relationship="BudgetCaptureDBModel.FK_Directorate_Department" FromRole="Department" ToRole="Directorate" />
+    <NavigationProperty Name="ExistingStaffs" Relationship="BudgetCaptureDBModel.FK_ExistingStaff_Department" FromRole="Department" ToRole="ExistingStaff" />
+    <NavigationProperty Name="AppUsers" Relationship="BudgetCaptureDBModel.FK_AppUser_Department" FromRole="Department" ToRole="AppUser" />
+    <NavigationProperty Name="ExpenseProjections" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_Department" FromRole="Department" ToRole="ExpenseProjection" />
+    <NavigationProperty Name="AssetBudgets" Relationship="BudgetCaptureDBModel.FK_AssetBudget_Department" FromRole="Department" ToRole="AssetBudget" />
+    <NavigationProperty Name="BudgetSummaryViews" Relationship="BudgetCaptureDBModel.FK_BudgetSummaryView_Department" FromRole="Department" ToRole="BudgetSummaryView" />
+    <NavigationProperty Name="IndirectBudgets" Relationship="BudgetCaptureDBModel.FK_IndirectBudget_Department" FromRole="Department" ToRole="IndirectBudget" />
+    <NavigationProperty Name="DirectBudgets" Relationship="BudgetCaptureDBModel.FK_DirectBudget_Department" FromRole="Department" ToRole="DirectBudget" />
+    <NavigationProperty Name="CapexBudgets" Relationship="BudgetCaptureDBModel.FK_CapexBudget_Department" FromRole="Department" ToRole="CapexBudget" />
+    <NavigationProperty Name="RevenueProjections" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_Department" FromRole="Department" ToRole="RevenueProjection" />
+    <NavigationProperty Name="ATCRequestHeaders" Relationship="BudgetCaptureDBModel.FK_ATCRequestHeader_Department" FromRole="Department" ToRole="ATCRequestHeader" />
+    <NavigationProperty Name="IndirectBudgetATCs" Relationship="BudgetCaptureDBModel.FK_IndirectBudgetATC_Department" FromRole="Department" ToRole="IndirectBudgetATC" />
+    <NavigationProperty Name="DirectBudgetATCs" Relationship="BudgetCaptureDBModel.FK_DirectBudgetATC_Department" FromRole="Department" ToRole="DirectBudgetATC" />
+    <NavigationProperty Name="AssetBudgetATCs" Relationship="BudgetCaptureDBModel.FK_AssetBudgetATC_Department" FromRole="Department" ToRole="AssetBudgetATC" />
+    <NavigationProperty Name="CapexBudgetATCs" Relationship="BudgetCaptureDBModel.FK_CapexBudgetATC_Department" FromRole="Department" ToRole="CapexBudgetATC" />
+    <NavigationProperty Name="ExistingStaffBudgetATCs" Relationship="BudgetCaptureDBModel.FK_ExistingStaffBudgetATC_Department" FromRole="Department" ToRole="ExistingStaffBudgetATC" />
+  </EntityType>
+  <EntityType Name="Directorate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Departments" Relationship="BudgetCaptureDBModel.FK_Directorate_Department" FromRole="Directorate" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="ExistingStaff">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GradeID" Type="Int32" />
+    <Property Name="TotalNumber" Type="Int32" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="TotalCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DateAdded" Type="DateTime" Precision="3" />
+    <Property Name="AddedBy" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="DateApproved" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_ExistingStaff_Department" FromRole="ExistingStaff" ToRole="Department" />
+    <NavigationProperty Name="Grade" Relationship="BudgetCaptureDBModel.FK_ExistingStaff_Grade" FromRole="ExistingStaff" ToRole="Grade" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_ExistingStaff_BudgetYear" FromRole="ExistingStaff" ToRole="BudgetYear" />
+    <Property Type="Decimal" Name="ManningCost" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CasCost" Precision="18" Scale="2" />
+    <Property Type="String" Name="EDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDApprovalDate" Precision="3" />
+    <Property Type="DateTime" Name="MDApprovalDate" Precision="3" />
+    <Property Type="Boolean" Name="ATCApproved" />
+    <Property Type="String" Name="ATCBatchID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ATCStatus" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Grade">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CostPerMonth" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CostPerYear" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="ExistingStaffs" Relationship="BudgetCaptureDBModel.FK_ExistingStaff_Grade" FromRole="Grade" ToRole="ExistingStaff" />
+    <Property Type="Boolean" Name="isActive" />
+  </EntityType>
+  <EntityType Name="ListedSecurity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="BudgetYearId" Type="Int32" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_ListedSecurity_BudgetYear" FromRole="ListedSecurity" ToRole="BudgetYear" />
+  </EntityType>
+  <EntityType Name="MonthOfYear">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MonthName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MonthNumber" Type="Int32" />
+    <NavigationProperty Name="ExpenseProjections" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_MonthOfYear" FromRole="MonthOfYear" ToRole="ExpenseProjection" />
+    <NavigationProperty Name="AssetBudgets" Relationship="BudgetCaptureDBModel.FK_AssetBudget_MonthOfYear" FromRole="MonthOfYear" ToRole="AssetBudget" />
+    <NavigationProperty Name="RevenueProjections" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_monthProjection" FromRole="MonthOfYear" ToRole="RevenueProjection" />
+    <NavigationProperty Name="GSS_Invoice" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_MonthOfYear" FromRole="MonthOfYear" ToRole="GSS_Invoice" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="BudgetYearID" Type="Int32" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_Property_BudgetYear" FromRole="Property" ToRole="BudgetYear" />
+    <Property Type="Decimal" Name="ValuedAt" Precision="18" Scale="2" />
+  </EntityType>
+  <Association Name="FK_ListedSecurity_BudgetYear">
+    <End Role="BudgetYear" Type="BudgetCaptureDBModel.BudgetYear" Multiplicity="0..1" />
+    <End Role="ListedSecurity" Type="BudgetCaptureDBModel.ListedSecurity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ListedSecurity">
+        <PropertyRef Name="BudgetYearId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Property_BudgetYear">
+    <End Role="BudgetYear" Type="BudgetCaptureDBModel.BudgetYear" Multiplicity="0..1" />
+    <End Role="Property" Type="BudgetCaptureDBModel.Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="BudgetYearID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Directorate_Department">
+    <End Role="Directorate" Type="BudgetCaptureDBModel.Directorate" Multiplicity="0..1" />
+    <End Role="Department" Type="BudgetCaptureDBModel.Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Directorate">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Department">
+        <PropertyRef Name="DirectorateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExistingStaff_Department">
+    <End Role="Department" Type="BudgetCaptureDBModel.Department" Multiplicity="0..1" />
+    <End Role="ExistingStaff" Type="BudgetCaptureDBModel.ExistingStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExistingStaff">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExistingStaff_Grade">
+    <End Role="Grade" Type="BudgetCaptureDBModel.Grade" Multiplicity="0..1" />
+    <End Role="ExistingStaff" Type="BudgetCaptureDBModel.ExistingStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grade">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExistingStaff">
+        <PropertyRef Name="GradeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AppUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FullName" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="String" Name="UserRole" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="String" Name="AddedBy" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastModified" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_AppUser_Department" FromRole="AppUser" ToRole="Department" />
+    <Property Type="String" Name="Email" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StaffID" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="GSS_Invoice" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_GSS_Invoice" FromRole="AppUser" ToRole="GSS_Invoice" />
+    <NavigationProperty Name="GSS_SalesTbl" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser" FromRole="AppUser" ToRole="GSS_SalesTbl" />
+    <NavigationProperty Name="GSS_SalesTbl1" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser1" FromRole="AppUser" ToRole="GSS_SalesTbl" />
+    <NavigationProperty Name="GSS_SalesTbl2" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser2" FromRole="AppUser" ToRole="GSS_SalesTbl" />
+    <NavigationProperty Name="GSS_SalesTbl3" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser3" FromRole="AppUser" ToRole="GSS_SalesTbl" />
+    <NavigationProperty Name="GSS_SalesTbl4" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser4" FromRole="AppUser" ToRole="GSS_SalesTbl" />
+  </EntityType>
+  <Association Name="FK_AppUser_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.AppUser" Role="AppUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AppUser">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExistingStaff_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ExistingStaff" Role="ExistingStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExistingStaff">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ExpenseProjection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <Property Type="Int32" Name="ExpenseTypeID" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="String" Name="Details" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MonthYr" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="String" Name="AddedBy" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateApproved" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_BudgetYear" FromRole="ExpenseProjection" ToRole="BudgetYear" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_Department" FromRole="ExpenseProjection" ToRole="Department" />
+    <NavigationProperty Name="MonthOfYear" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_MonthOfYear" FromRole="ExpenseProjection" ToRole="MonthOfYear" />
+    <NavigationProperty Name="ExpenseType" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_ExpenseType" FromRole="ExpenseProjection" ToRole="ExpenseType" />
+    <Property Type="String" Name="EDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDApprovalDate" Precision="3" />
+    <Property Type="DateTime" Name="MDApprovalDate" Precision="3" />
+  </EntityType>
+  <Association Name="FK_ExpenseProjection_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ExpenseProjection" Role="ExpenseProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExpenseProjection">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseProjection_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ExpenseProjection" Role="ExpenseProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExpenseProjection">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseProjection_MonthOfYear">
+    <End Type="BudgetCaptureDBModel.MonthOfYear" Role="MonthOfYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ExpenseProjection" Role="ExpenseProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonthOfYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExpenseProjection">
+        <PropertyRef Name="MonthYr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="AssetName" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AssetTypeID" />
+    <Property Type="Decimal" Name="UnitPrice" Precision="18" Scale="2" />
+    <NavigationProperty Name="AssetType" Relationship="BudgetCaptureDBModel.FK_Asset_AssetType" FromRole="Asset" ToRole="AssetType" />
+    <NavigationProperty Name="AssetBudgets" Relationship="BudgetCaptureDBModel.FK_AssetBudget_Asset" FromRole="Asset" ToRole="AssetBudget" />
+    <Property Type="String" Name="DelFlg" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AssetBudget">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="AssetID" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Int32" Name="MonthID" />
+    <Property Type="Int32" Name="Quantity" />
+    <Property Type="String" Name="AddeBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateApproved" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="Asset" Relationship="BudgetCaptureDBModel.FK_AssetBudget_Asset" FromRole="AssetBudget" ToRole="Asset" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_AssetBudget_BudgetYear" FromRole="AssetBudget" ToRole="BudgetYear" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_AssetBudget_Department" FromRole="AssetBudget" ToRole="Department" />
+    <NavigationProperty Name="MonthOfYear" Relationship="BudgetCaptureDBModel.FK_AssetBudget_MonthOfYear" FromRole="AssetBudget" ToRole="MonthOfYear" />
+    <Property Type="Decimal" Name="TotalCost" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="ExistingQuantity" />
+    <Property Type="String" Name="Justification" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDApprovalDate" Precision="3" />
+    <Property Type="String" Name="MDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MDApprovalDate" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ATCApproved" />
+    <Property Type="String" Name="ATCBatchID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ATCStatus" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="AssetType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Assets" Relationship="BudgetCaptureDBModel.FK_Asset_AssetType" FromRole="AssetType" ToRole="Asset" />
+    <Property Type="String" Name="GLCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isActive" />
+  </EntityType>
+  <Association Name="FK_Asset_AssetType">
+    <End Type="BudgetCaptureDBModel.AssetType" Role="AssetType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.Asset" Role="Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Asset">
+        <PropertyRef Name="AssetTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetBudget_Asset">
+    <End Type="BudgetCaptureDBModel.Asset" Role="Asset" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.AssetBudget" Role="AssetBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asset">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AssetBudget">
+        <PropertyRef Name="AssetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetBudget_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.AssetBudget" Role="AssetBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AssetBudget">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetBudget_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.AssetBudget" Role="AssetBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AssetBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetBudget_MonthOfYear">
+    <End Type="BudgetCaptureDBModel.MonthOfYear" Role="MonthOfYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.AssetBudget" Role="AssetBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonthOfYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AssetBudget">
+        <PropertyRef Name="MonthID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BudgetSummaryView">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BudgetElement" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="TotalNoCapture" Type="Int32" />
+    <Property Name="TotalPending" Type="Int32" />
+    <Property Name="TotalApproved" Type="Int32" />
+    <Property Name="TotalAmtPending" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmtApproved" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="BudgetYrID" Type="Int32" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_BudgetSummaryView_BudgetYear" FromRole="BudgetSummaryView" ToRole="BudgetYear" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_BudgetSummaryView_Department" FromRole="BudgetSummaryView" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_BudgetSummaryView_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.BudgetSummaryView" Role="BudgetSummaryView" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BudgetSummaryView">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BudgetSummaryView_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.BudgetSummaryView" Role="BudgetSummaryView" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BudgetSummaryView">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ExpenseType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GLCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <NavigationProperty Name="ExpenseProjections" Relationship="BudgetCaptureDBModel.FK_ExpenseProjection_ExpenseType" FromRole="ExpenseType" ToRole="ExpenseProjection" />
+  </EntityType>
+  <Association Name="FK_ExpenseProjection_ExpenseType">
+    <End Type="BudgetCaptureDBModel.ExpenseType" Role="ExpenseType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ExpenseProjection" Role="ExpenseProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExpenseType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExpenseProjection">
+        <PropertyRef Name="ExpenseTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BudgetMenuItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="BudgetItem" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Url" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Code" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ATCRequestHeaders" Relationship="BudgetCaptureDBModel.FK_ATCRequestHeader_BudgetMenuItem" FromRole="BudgetMenuItem" ToRole="ATCRequestHeader" />
+  </EntityType>
+  <EntityType Name="DepartmentBudgetMenu">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+      <PropertyRef Name="MenuItemID" />
+    </Key>
+    <Property Type="Int32" Name="DepartmentID" Nullable="false" />
+    <Property Type="Int32" Name="MenuItemID" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GradeSalaryElement">
+    <Key>
+      <PropertyRef Name="SalElementID" />
+      <PropertyRef Name="GradeId" />
+    </Key>
+    <Property Type="Int32" Name="SalElementID" Nullable="false" />
+    <Property Type="Int32" Name="GradeId" Nullable="false" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="GradeSalaryElement1" Relationship="BudgetCaptureDBModel.FK_GradeSalaryElement_GradeSalaryElement" FromRole="GradeSalaryElement" ToRole="GradeSalaryElement1" />
+    <NavigationProperty Name="GradeSalaryElement2" Relationship="BudgetCaptureDBModel.FK_GradeSalaryElement_GradeSalaryElement" FromRole="GradeSalaryElement1" ToRole="GradeSalaryElement" />
+  </EntityType>
+  <EntityType Name="SalaryElement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Elements" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Code" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CategoryId" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="SalBenCategory" Relationship="BudgetCaptureDBModel.FK_SalaryElement_SalBenCategory" FromRole="SalaryElement" ToRole="SalBenCategory" />
+  </EntityType>
+  <EntityType Name="SalBenCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="SalaryElements" Relationship="BudgetCaptureDBModel.FK_SalaryElement_SalBenCategory" FromRole="SalBenCategory" ToRole="SalaryElement" />
+  </EntityType>
+  <Association Name="FK_GradeSalaryElement_GradeSalaryElement">
+    <End Type="BudgetCaptureDBModel.GradeSalaryElement" Role="GradeSalaryElement" Multiplicity="1" />
+    <End Type="BudgetCaptureDBModel.GradeSalaryElement" Role="GradeSalaryElement1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="GradeSalaryElement">
+        <PropertyRef Name="SalElementID" />
+        <PropertyRef Name="GradeId" />
+      </Principal>
+      <Dependent Role="GradeSalaryElement1">
+        <PropertyRef Name="SalElementID" />
+        <PropertyRef Name="GradeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalaryElement_SalBenCategory">
+    <End Type="BudgetCaptureDBModel.SalBenCategory" Role="SalBenCategory" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.SalaryElement" Role="SalaryElement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalBenCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SalaryElement">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="IndirectType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GLCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="IndirectBudgetItems" Relationship="BudgetCaptureDBModel.FK_IndirectBudgetItem_IndirectType" FromRole="IndirectType" ToRole="IndirectBudgetItem" />
+  </EntityType>
+  <EntityType Name="IndirectBudgetItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IndirectTypeID" />
+    <Property Type="String" Name="DelFlg" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IndirectType" Relationship="BudgetCaptureDBModel.FK_IndirectBudgetItem_IndirectType" FromRole="IndirectBudgetItem" ToRole="IndirectType" />
+    <NavigationProperty Name="IndirectBudgets" Relationship="BudgetCaptureDBModel.FK_IndirectBudget_IndirectBudgetItem" FromRole="IndirectBudgetItem" ToRole="IndirectBudget" />
+  </EntityType>
+  <Association Name="FK_IndirectBudgetItem_IndirectType">
+    <End Type="BudgetCaptureDBModel.IndirectType" Role="IndirectType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.IndirectBudgetItem" Role="IndirectBudgetItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IndirectType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IndirectBudgetItem">
+        <PropertyRef Name="IndirectTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="IndirectBudget">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="IndirectItemID" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="String" Name="Justification" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AddeBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateApproved" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_IndirectBudget_BudgetYear" FromRole="IndirectBudget" ToRole="BudgetYear" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_IndirectBudget_Department" FromRole="IndirectBudget" ToRole="Department" />
+    <NavigationProperty Name="IndirectBudgetItem" Relationship="BudgetCaptureDBModel.FK_IndirectBudget_IndirectBudgetItem" FromRole="IndirectBudget" ToRole="IndirectBudgetItem" />
+    <Property Type="String" Name="EDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDApprovalDate" Precision="3" />
+    <Property Type="DateTime" Name="MDApprovalDate" Precision="3" />
+    <Property Type="Boolean" Name="ATCApproved" />
+    <Property Type="String" Name="ATCBatchID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ATCStatus" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ATCOutstandingAmount" Precision="18" Scale="2" />
+  </EntityType>
+  <Association Name="FK_IndirectBudget_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.IndirectBudget" Role="IndirectBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IndirectBudget">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IndirectBudget_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.IndirectBudget" Role="IndirectBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IndirectBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IndirectBudget_IndirectBudgetItem">
+    <End Type="BudgetCaptureDBModel.IndirectBudgetItem" Role="IndirectBudgetItem" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.IndirectBudget" Role="IndirectBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IndirectBudgetItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IndirectBudget">
+        <PropertyRef Name="IndirectItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DirectBudget">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="DirectItemID" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="String" Name="Justification" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AddeBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateApproved" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_DirectBudget_BudgetYear" FromRole="DirectBudget" ToRole="BudgetYear" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_DirectBudget_Department" FromRole="DirectBudget" ToRole="Department" />
+    <NavigationProperty Name="DirectExpenseItem" Relationship="BudgetCaptureDBModel.FK_DirectBudget_DirectExpenseItem" FromRole="DirectBudget" ToRole="DirectExpenseItem" />
+    <Property Type="String" Name="EDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDApprovalDate" Precision="3" />
+    <Property Type="DateTime" Name="MDApprovalDate" Precision="3" />
+    <Property Type="Boolean" Name="ATCApproved" />
+    <Property Type="String" Name="ATCBatchID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ATCStatus" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="DirectExpenseItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DirectTypeID" />
+    <Property Type="String" Name="DelFlg" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DirectBudgets" Relationship="BudgetCaptureDBModel.FK_DirectBudget_DirectExpenseItem" FromRole="DirectExpenseItem" ToRole="DirectBudget" />
+    <NavigationProperty Name="DirectType" Relationship="BudgetCaptureDBModel.FK_DirectExpenseItem_DirectType" FromRole="DirectExpenseItem" ToRole="DirectType" />
+  </EntityType>
+  <EntityType Name="DirectType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GLCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="DirectExpenseItems" Relationship="BudgetCaptureDBModel.FK_DirectExpenseItem_DirectType" FromRole="DirectType" ToRole="DirectExpenseItem" />
+  </EntityType>
+  <Association Name="FK_DirectBudget_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.DirectBudget" Role="DirectBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DirectBudget">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DirectBudget_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.DirectBudget" Role="DirectBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DirectBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DirectBudget_DirectExpenseItem">
+    <End Type="BudgetCaptureDBModel.DirectExpenseItem" Role="DirectExpenseItem" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.DirectBudget" Role="DirectBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DirectExpenseItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DirectBudget">
+        <PropertyRef Name="DirectItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DirectExpenseItem_DirectType">
+    <End Type="BudgetCaptureDBModel.DirectType" Role="DirectType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.DirectExpenseItem" Role="DirectExpenseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DirectType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DirectExpenseItem">
+        <PropertyRef Name="DirectTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CapexBudget">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CapexItemID" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="String" Name="Justification" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AddeBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateApproved" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_CapexBudget_BudgetYear" FromRole="CapexBudget" ToRole="BudgetYear" />
+    <NavigationProperty Name="CapexExpenseItem" Relationship="BudgetCaptureDBModel.FK_CapexBudget_CapexExpenseItem" FromRole="CapexBudget" ToRole="CapexExpenseItem" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_CapexBudget_Department" FromRole="CapexBudget" ToRole="Department" />
+    <Property Type="String" Name="EDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDApprovalDate" Precision="3" />
+    <Property Type="String" Name="MDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MDApprovalDate" Precision="3" />
+    <Property Type="Boolean" Name="ATCApproved" />
+    <Property Type="String" Name="ATCBatchID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ATCStatus" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="CapexExpenseItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CapexTypeID" />
+    <Property Type="String" Name="DelFlg" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CapexBudgets" Relationship="BudgetCaptureDBModel.FK_CapexBudget_CapexExpenseItem" FromRole="CapexExpenseItem" ToRole="CapexBudget" />
+    <NavigationProperty Name="CapexType" Relationship="BudgetCaptureDBModel.FK_CapexExpenseItem_CapexType" FromRole="CapexExpenseItem" ToRole="CapexType" />
+  </EntityType>
+  <EntityType Name="CapexType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GLCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isActive" />
+    <Property Type="Int32" Name="BudgetYearID" />
+    <NavigationProperty Name="CapexExpenseItems" Relationship="BudgetCaptureDBModel.FK_CapexExpenseItem_CapexType" FromRole="CapexType" ToRole="CapexExpenseItem" />
+  </EntityType>
+  <Association Name="FK_CapexBudget_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.CapexBudget" Role="CapexBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CapexBudget">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CapexBudget_CapexExpenseItem">
+    <End Type="BudgetCaptureDBModel.CapexExpenseItem" Role="CapexExpenseItem" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.CapexBudget" Role="CapexBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CapexExpenseItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CapexBudget">
+        <PropertyRef Name="CapexItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CapexBudget_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.CapexBudget" Role="CapexBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CapexBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CapexExpenseItem_CapexType">
+    <End Type="BudgetCaptureDBModel.CapexType" Role="CapexType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.CapexExpenseItem" Role="CapexExpenseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CapexType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CapexExpenseItem">
+        <PropertyRef Name="CapexTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CustomerType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="Customers" Relationship="BudgetCaptureDBModel.FK_Customer_CustomerType" FromRole="CustomerType" ToRole="Customer" />
+    <NavigationProperty Name="RevenueProjections" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_CustomerType" FromRole="CustomerType" ToRole="RevenueProjection" />
+    <NavigationProperty Name="GSS_Customer" Relationship="BudgetCaptureDBModel.FK_GSS_Customer_GSS_CustomerType" FromRole="CustomerType" ToRole="GSS_Customer" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Code" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FullName" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CustomerTypeID" />
+    <NavigationProperty Name="CustomerType" Relationship="BudgetCaptureDBModel.FK_Customer_CustomerType" FromRole="Customer" ToRole="CustomerType" />
+  </EntityType>
+  <Association Name="FK_Customer_CustomerType">
+    <End Type="BudgetCaptureDBModel.CustomerType" Role="CustomerType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="CustomerTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="RevenueProjection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <Property Type="String" Name="CustomerCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CustomerName" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MonthID" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="CustomerTypeID" />
+    <Property Type="String" Name="AddedBy" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateApproved" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_BudgetYear" FromRole="RevenueProjection" ToRole="BudgetYear" />
+    <NavigationProperty Name="CustomerType" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_CustomerType" FromRole="RevenueProjection" ToRole="CustomerType" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_Department" FromRole="RevenueProjection" ToRole="Department" />
+    <NavigationProperty Name="MonthOfYear" Relationship="BudgetCaptureDBModel.FK_RevenueProjection_monthProjection" FromRole="RevenueProjection" ToRole="MonthOfYear" />
+    <Property Type="String" Name="EDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MDApprover" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EDApprovalDate" Precision="3" />
+    <Property Type="DateTime" Name="MDApprovalDate" Precision="3" />
+  </EntityType>
+  <Association Name="FK_RevenueProjection_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.RevenueProjection" Role="RevenueProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RevenueProjection">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RevenueProjection_CustomerType">
+    <End Type="BudgetCaptureDBModel.CustomerType" Role="CustomerType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.RevenueProjection" Role="RevenueProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RevenueProjection">
+        <PropertyRef Name="CustomerTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RevenueProjection_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.RevenueProjection" Role="RevenueProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RevenueProjection">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RevenueProjection_monthProjection">
+    <End Type="BudgetCaptureDBModel.MonthOfYear" Role="MonthOfYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.RevenueProjection" Role="RevenueProjection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonthOfYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RevenueProjection">
+        <PropertyRef Name="MonthID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TrackApproval">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Int32" Name="status" />
+    <Property Type="DateTime" Name="dateApproved" Precision="3" />
+    <Property Type="String" Name="ActionBy" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BudgetYr" />
+  </EntityType>
+  <EntityType Name="ATCRequestHeader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="BatchID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Int32" Name="BudgetYrID" />
+    <Property Type="Int32" Name="BudgetTypeId" />
+    <Property Type="String" Name="RequestBy" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="DateTime" Name="RequestDate" Precision="3" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <NavigationProperty Name="BudgetMenuItem" Relationship="BudgetCaptureDBModel.FK_ATCRequestHeader_BudgetMenuItem" FromRole="ATCRequestHeader" ToRole="BudgetMenuItem" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_ATCRequestHeader_BudgetYear" FromRole="ATCRequestHeader" ToRole="BudgetYear" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_ATCRequestHeader_Department" FromRole="ATCRequestHeader" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_ATCRequestHeader_BudgetMenuItem">
+    <End Type="BudgetCaptureDBModel.BudgetMenuItem" Role="BudgetMenuItem" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ATCRequestHeader" Role="ATCRequestHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetMenuItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ATCRequestHeader">
+        <PropertyRef Name="BudgetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ATCRequestHeader_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ATCRequestHeader" Role="ATCRequestHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ATCRequestHeader">
+        <PropertyRef Name="BudgetYrID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ATCRequestHeader_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ATCRequestHeader" Role="ATCRequestHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ATCRequestHeader">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="GSS_Invoice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" />
+    <Property Type="Int32" Name="PeriodYear" />
+    <Property Type="Int32" Name="PeriodMonth" />
+    <Property Type="Decimal" Name="TotalCertifiedVolume" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalInvoiceAmount" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TotalVAT" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="DateCreated" Precision="3" />
+    <NavigationProperty Name="AppUser" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_GSS_Invoice" FromRole="GSS_Invoice" ToRole="AppUser" />
+    <NavigationProperty Name="BudgetYear" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_BudgetYear" FromRole="GSS_Invoice" ToRole="BudgetYear" />
+    <NavigationProperty Name="MonthOfYear" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_MonthOfYear" FromRole="GSS_Invoice" ToRole="MonthOfYear" />
+    <NavigationProperty Name="GSS_Customer" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_GSS_Customer" FromRole="GSS_Invoice" ToRole="GSS_Customer" />
+  </EntityType>
+  <EntityType Name="GSS_PipelineSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TotalCapacity" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="isActive" />
+    <NavigationProperty Name="GSS_Customer" Relationship="BudgetCaptureDBModel.FK_GSS_Customer_GSS_PipelineSection" FromRole="GSS_PipelineSection" ToRole="GSS_Customer" />
+  </EntityType>
+  <EntityType Name="GSS_SalesTbl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CustomerID" />
+    <Property Type="Decimal" Name="CapturedVolumeSale" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DateCaptured" Precision="3" />
+    <Property Type="Int32" Name="CapturedBy" />
+    <Property Type="Int32" Name="CapturedVolumeApprovedBy" />
+    <Property Type="Decimal" Name="CertifiedVolumeSale" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DateCertified" Precision="3" />
+    <Property Type="Int32" Name="CertifiedBy" />
+    <Property Type="Int32" Name="CertifiedApprovedby" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="Decimal" Name="InvoiceValue" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="VatValue" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DateInvoiced" Precision="3" />
+    <Property Type="Int32" Name="InvoicedBy" />
+    <Property Type="Int32" Name="TransactionPeriod" Nullable="false" />
+    <NavigationProperty Name="AppUser" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser" FromRole="GSS_SalesTbl" ToRole="AppUser" />
+    <NavigationProperty Name="AppUser1" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser1" FromRole="GSS_SalesTbl" ToRole="AppUser" />
+    <NavigationProperty Name="AppUser2" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser2" FromRole="GSS_SalesTbl" ToRole="AppUser" />
+    <NavigationProperty Name="AppUser3" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser3" FromRole="GSS_SalesTbl" ToRole="AppUser" />
+    <NavigationProperty Name="AppUser4" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_AppUser4" FromRole="GSS_SalesTbl" ToRole="AppUser" />
+    <NavigationProperty Name="GSS_Customer" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_GSS_Customer" FromRole="GSS_SalesTbl" ToRole="GSS_Customer" />
+  </EntityType>
+  <Association Name="FK_GSS_Invoice_GSS_Invoice">
+    <End Type="BudgetCaptureDBModel.AppUser" Role="AppUser" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_Invoice" Role="GSS_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_Invoice">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_SalesTbl_AppUser">
+    <End Type="BudgetCaptureDBModel.AppUser" Role="AppUser" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_SalesTbl" Role="GSS_SalesTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_SalesTbl">
+        <PropertyRef Name="CapturedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_SalesTbl_AppUser1">
+    <End Type="BudgetCaptureDBModel.AppUser" Role="AppUser" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_SalesTbl" Role="GSS_SalesTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_SalesTbl">
+        <PropertyRef Name="CapturedVolumeApprovedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_SalesTbl_AppUser2">
+    <End Type="BudgetCaptureDBModel.AppUser" Role="AppUser" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_SalesTbl" Role="GSS_SalesTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_SalesTbl">
+        <PropertyRef Name="CertifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_SalesTbl_AppUser3">
+    <End Type="BudgetCaptureDBModel.AppUser" Role="AppUser" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_SalesTbl" Role="GSS_SalesTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_SalesTbl">
+        <PropertyRef Name="CertifiedApprovedby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_SalesTbl_AppUser4">
+    <End Type="BudgetCaptureDBModel.AppUser" Role="AppUser" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_SalesTbl" Role="GSS_SalesTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_SalesTbl">
+        <PropertyRef Name="InvoicedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_Invoice_BudgetYear">
+    <End Type="BudgetCaptureDBModel.BudgetYear" Role="BudgetYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_Invoice" Role="GSS_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BudgetYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_Invoice">
+        <PropertyRef Name="PeriodYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_Invoice_MonthOfYear">
+    <End Type="BudgetCaptureDBModel.MonthOfYear" Role="MonthOfYear" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_Invoice" Role="GSS_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonthOfYear">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_Invoice">
+        <PropertyRef Name="PeriodMonth" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="GSS_Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CompanyName" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompanyAddress" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CustomerTypeID" />
+    <Property Type="String" Name="ContactPerson" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MobileNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PipelineSectionID" />
+    <Property Type="Int32" Name="PaymentTermFlg" />
+    <Property Type="Decimal" Name="UnitPrice" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="VATFlg" />
+    <Property Type="Decimal" Name="MinimumOrderVolume" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="CapitalRecovery" />
+    <Property Type="Boolean" Name="isActive" />
+    <Property Type="String" Name="AddedBy" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="DateTime" Name="LastUpdatedDate" Precision="3" />
+    <Property Type="String" Name="LastUpdatedBy" MaxLength="400" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CustomerType" Relationship="BudgetCaptureDBModel.FK_GSS_Customer_GSS_CustomerType" FromRole="GSS_Customer" ToRole="CustomerType" />
+    <NavigationProperty Name="GSS_PipelineSection" Relationship="BudgetCaptureDBModel.FK_GSS_Customer_GSS_PipelineSection" FromRole="GSS_Customer" ToRole="GSS_PipelineSection" />
+    <NavigationProperty Name="GSS_Invoice" Relationship="BudgetCaptureDBModel.FK_GSS_Invoice_GSS_Customer" FromRole="GSS_Customer" ToRole="GSS_Invoice" />
+    <NavigationProperty Name="GSS_SalesTbl" Relationship="BudgetCaptureDBModel.FK_GSS_SalesTbl_GSS_Customer" FromRole="GSS_Customer" ToRole="GSS_SalesTbl" />
+  </EntityType>
+  <Association Name="FK_GSS_Customer_GSS_CustomerType">
+    <End Type="BudgetCaptureDBModel.CustomerType" Role="CustomerType" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_Customer" Role="GSS_Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_Customer">
+        <PropertyRef Name="CustomerTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_Customer_GSS_PipelineSection">
+    <End Type="BudgetCaptureDBModel.GSS_PipelineSection" Role="GSS_PipelineSection" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_Customer" Role="GSS_Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GSS_PipelineSection">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_Customer">
+        <PropertyRef Name="PipelineSectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_Invoice_GSS_Customer">
+    <End Type="BudgetCaptureDBModel.GSS_Customer" Role="GSS_Customer" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_Invoice" Role="GSS_Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GSS_Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_Invoice">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GSS_SalesTbl_GSS_Customer">
+    <End Type="BudgetCaptureDBModel.GSS_Customer" Role="GSS_Customer" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.GSS_SalesTbl" Role="GSS_SalesTbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GSS_Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GSS_SalesTbl">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="IndirectBudgetATC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ATCBatchId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BudgetItemId" />
+    <Property Type="String" Name="BudgetItem" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_IndirectBudgetATC_Department" FromRole="IndirectBudgetATC" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_IndirectBudgetATC_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.IndirectBudgetATC" Role="IndirectBudgetATC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IndirectBudgetATC">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DirectBudgetATC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ATCBatchId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BudgetItemId" />
+    <Property Type="String" Name="BudgetItem" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_DirectBudgetATC_Department" FromRole="DirectBudgetATC" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_DirectBudgetATC_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.DirectBudgetATC" Role="DirectBudgetATC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DirectBudgetATC">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AssetBudgetATC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ATCBatchId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BudgetItemId" />
+    <Property Type="String" Name="BudgetItem" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_AssetBudgetATC_Department" FromRole="AssetBudgetATC" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_AssetBudgetATC_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.AssetBudgetATC" Role="AssetBudgetATC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AssetBudgetATC">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CapexBudgetATC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ATCBatchId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BudgetItemId" />
+    <Property Type="String" Name="BudgetItem" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_CapexBudgetATC_Department" FromRole="CapexBudgetATC" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_CapexBudgetATC_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.CapexBudgetATC" Role="CapexBudgetATC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CapexBudgetATC">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ExistingStaffBudgetATC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ATCBatchId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BudgetItemId" />
+    <Property Type="String" Name="BudgetItem" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ATCAmount" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="DateTime" Name="DateAdded" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <NavigationProperty Name="Department" Relationship="BudgetCaptureDBModel.FK_ExistingStaffBudgetATC_Department" FromRole="ExistingStaffBudgetATC" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_ExistingStaffBudgetATC_Department">
+    <End Type="BudgetCaptureDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="BudgetCaptureDBModel.ExistingStaffBudgetATC" Role="ExistingStaffBudgetATC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExistingStaffBudgetATC">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

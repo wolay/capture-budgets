@@ -1,0 +1,5 @@
+
+Log Entry : 
+09/03/2014 10:04:37
+Error in: http://localhost:56069/Default.aspx. Error Message:Error: Could not find stored procedure 'bc_ComputeBudgetSummary_ExpenseProjection'.
+__________________________

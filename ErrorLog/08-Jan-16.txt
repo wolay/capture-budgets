@@ -1,0 +1,5 @@
+
+Log Entry : 
+01/08/2016 11:55:29
+Error in: http://localhost:61559/CapexBudgetPg.aspx. Error Message:Error: 
+__________________________

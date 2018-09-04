@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BudgetCaptureDBModelStoreContainer" CdmEntityContainer="BudgetCaptureDBEntities">
+    <EntitySetMapping Name="BudgetYears">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.BudgetYear">
+        <MappingFragment StoreEntitySet="BudgetYear">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DirectorateID" ColumnName="DirectorateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Directorates">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.Directorate">
+        <MappingFragment StoreEntitySet="Directorate">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExistingStaffs">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.ExistingStaff">
+        <MappingFragment StoreEntitySet="ExistingStaff">
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="ATCStatus" ColumnName="ATCStatus" />
+          <ScalarProperty Name="ATCBatchID" ColumnName="ATCBatchID" />
+          <ScalarProperty Name="ATCApproved" ColumnName="ATCApproved" />
+          <ScalarProperty Name="MDApprovalDate" ColumnName="MDApprovalDate" />
+          <ScalarProperty Name="EDApprovalDate" ColumnName="EDApprovalDate" />
+          <ScalarProperty Name="MDApprover" ColumnName="MDApprover" />
+          <ScalarProperty Name="EDApprover" ColumnName="EDApprover" />
+          <ScalarProperty Name="CasCost" ColumnName="CasCost" />
+          <ScalarProperty Name="ManningCost" ColumnName="ManningCost" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="TotalNumber" ColumnName="TotalNumber" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CostPerMonth" ColumnName="CostPerMonth" />
+          <ScalarProperty Name="CostPerYear" ColumnName="CostPerYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListedSecurities">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.ListedSecurity">
+        <MappingFragment StoreEntitySet="ListedSecurity">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BudgetYearId" ColumnName="BudgetYearId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonthOfYears">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.MonthOfYear">
+        <MappingFragment StoreEntitySet="MonthOfYear">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+          <ScalarProperty Name="MonthNumber" ColumnName="MonthNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Properties">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.Property">
+        <MappingFragment StoreEntitySet="Property">
+          <ScalarProperty Name="ValuedAt" ColumnName="ValuedAt" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BudgetYearID" ColumnName="BudgetYearID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppUsers">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.AppUser">
+        <MappingFragment StoreEntitySet="AppUser">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseProjections">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.ExpenseProjection">
+        <MappingFragment StoreEntitySet="ExpenseProjection">
+          <ScalarProperty Name="MDApprovalDate" ColumnName="MDApprovalDate" />
+          <ScalarProperty Name="EDApprovalDate" ColumnName="EDApprovalDate" />
+          <ScalarProperty Name="MDApprover" ColumnName="MDApprover" />
+          <ScalarProperty Name="EDApprover" ColumnName="EDApprover" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="MonthYr" ColumnName="MonthYr" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="ExpenseTypeID" ColumnName="ExpenseTypeID" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assets">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.Asset">
+        <MappingFragment StoreEntitySet="Asset">
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+          <ScalarProperty Name="AssetName" ColumnName="AssetName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetBudgets">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.AssetBudget">
+        <MappingFragment StoreEntitySet="AssetBudget">
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="ATCStatus" ColumnName="ATCStatus" />
+          <ScalarProperty Name="ATCBatchID" ColumnName="ATCBatchID" />
+          <ScalarProperty Name="ATCApproved" ColumnName="ATCApproved" />
+          <ScalarProperty Name="MDApprovalDate" ColumnName="MDApprovalDate" />
+          <ScalarProperty Name="MDApprover" ColumnName="MDApprover" />
+          <ScalarProperty Name="EDApprovalDate" ColumnName="EDApprovalDate" />
+          <ScalarProperty Name="EDApprover" ColumnName="EDApprover" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="ExistingQuantity" ColumnName="ExistingQuantity" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddeBy" ColumnName="AddeBy" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="MonthID" ColumnName="MonthID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetTypes">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.AssetType">
+        <MappingFragment StoreEntitySet="AssetType">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="GLCode" ColumnName="GLCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetSummaryViews">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.BudgetSummaryView">
+        <MappingFragment StoreEntitySet="BudgetSummaryView">
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="TotalAmtApproved" ColumnName="TotalAmtApproved" />
+          <ScalarProperty Name="TotalAmtPending" ColumnName="TotalAmtPending" />
+          <ScalarProperty Name="TotalApproved" ColumnName="TotalApproved" />
+          <ScalarProperty Name="TotalPending" ColumnName="TotalPending" />
+          <ScalarProperty Name="TotalNoCapture" ColumnName="TotalNoCapture" />
+          <ScalarProperty Name="BudgetElement" ColumnName="BudgetElement" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.BudgetSummaryView">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="BudgetCaptureDBModel.Store.bc_ComputeBudgetSummary">
+            <ScalarProperty Name="BudgetYrID" ParameterName="budgetYrId" />
+            <ScalarProperty Name="DepartmentID" ParameterName="deptId" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseTypes">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.ExpenseType">
+        <MappingFragment StoreEntitySet="ExpenseType">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="GLCode" ColumnName="GLCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetMenuItems">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.BudgetMenuItem">
+        <MappingFragment StoreEntitySet="BudgetMenuItem">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="BudgetItem" ColumnName="BudgetItem" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartmentBudgetMenus">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.DepartmentBudgetMenu">
+        <MappingFragment StoreEntitySet="DepartmentBudgetMenu">
+          <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GradeSalaryElements">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.GradeSalaryElement">
+        <MappingFragment StoreEntitySet="GradeSalaryElement">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+          <ScalarProperty Name="SalElementID" ColumnName="SalElementID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaryElements">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.SalaryElement">
+        <MappingFragment StoreEntitySet="SalaryElement">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Elements" ColumnName="Elements" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalBenCategories">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.SalBenCategory">
+        <MappingFragment StoreEntitySet="SalBenCategory">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndirectTypes">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.IndirectType">
+        <MappingFragment StoreEntitySet="IndirectType">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="GLCode" ColumnName="GLCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndirectBudgetItems">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.IndirectBudgetItem">
+        <MappingFragment StoreEntitySet="IndirectBudgetItem">
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="IndirectTypeID" ColumnName="IndirectTypeID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndirectBudgets">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.IndirectBudget">
+        <MappingFragment StoreEntitySet="IndirectBudget">
+          <ScalarProperty Name="ATCOutstandingAmount" ColumnName="ATCOutstandingAmount" />
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="ATCStatus" ColumnName="ATCStatus" />
+          <ScalarProperty Name="ATCBatchID" ColumnName="ATCBatchID" />
+          <ScalarProperty Name="ATCApproved" ColumnName="ATCApproved" />
+          <ScalarProperty Name="MDApprovalDate" ColumnName="MDApprovalDate" />
+          <ScalarProperty Name="EDApprovalDate" ColumnName="EDApprovalDate" />
+          <ScalarProperty Name="MDApprover" ColumnName="MDApprover" />
+          <ScalarProperty Name="EDApprover" ColumnName="EDApprover" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddeBy" ColumnName="AddeBy" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="IndirectItemID" ColumnName="IndirectItemID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DirectBudgets">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.DirectBudget">
+        <MappingFragment StoreEntitySet="DirectBudget">
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="ATCStatus" ColumnName="ATCStatus" />
+          <ScalarProperty Name="ATCBatchID" ColumnName="ATCBatchID" />
+          <ScalarProperty Name="ATCApproved" ColumnName="ATCApproved" />
+          <ScalarProperty Name="MDApprovalDate" ColumnName="MDApprovalDate" />
+          <ScalarProperty Name="EDApprovalDate" ColumnName="EDApprovalDate" />
+          <ScalarProperty Name="MDApprover" ColumnName="MDApprover" />
+          <ScalarProperty Name="EDApprover" ColumnName="EDApprover" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddeBy" ColumnName="AddeBy" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="DirectItemID" ColumnName="DirectItemID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DirectExpenseItems">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.DirectExpenseItem">
+        <MappingFragment StoreEntitySet="DirectExpenseItem">
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="DirectTypeID" ColumnName="DirectTypeID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DirectTypes">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.DirectType">
+        <MappingFragment StoreEntitySet="DirectType">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="GLCode" ColumnName="GLCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CapexBudgets">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.CapexBudget">
+        <MappingFragment StoreEntitySet="CapexBudget">
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="ATCStatus" ColumnName="ATCStatus" />
+          <ScalarProperty Name="ATCBatchID" ColumnName="ATCBatchID" />
+          <ScalarProperty Name="ATCApproved" ColumnName="ATCApproved" />
+          <ScalarProperty Name="MDApprovalDate" ColumnName="MDApprovalDate" />
+          <ScalarProperty Name="MDApprover" ColumnName="MDApprover" />
+          <ScalarProperty Name="EDApprovalDate" ColumnName="EDApprovalDate" />
+          <ScalarProperty Name="EDApprover" ColumnName="EDApprover" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddeBy" ColumnName="AddeBy" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="CapexItemID" ColumnName="CapexItemID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CapexExpenseItems">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.CapexExpenseItem">
+        <MappingFragment StoreEntitySet="CapexExpenseItem">
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="CapexTypeID" ColumnName="CapexTypeID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CapexTypes">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.CapexType">
+        <MappingFragment StoreEntitySet="CapexType">
+          <ScalarProperty Name="BudgetYearID" ColumnName="BudgetYearID" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="GLCode" ColumnName="GLCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTypes">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.CustomerType">
+        <MappingFragment StoreEntitySet="CustomerType">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RevenueProjections">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.RevenueProjection">
+        <MappingFragment StoreEntitySet="RevenueProjection">
+          <ScalarProperty Name="MDApprovalDate" ColumnName="MDApprovalDate" />
+          <ScalarProperty Name="EDApprovalDate" ColumnName="EDApprovalDate" />
+          <ScalarProperty Name="MDApprover" ColumnName="MDApprover" />
+          <ScalarProperty Name="EDApprover" ColumnName="EDApprover" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="MonthID" ColumnName="MonthID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrackApprovals">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.TrackApproval">
+        <MappingFragment StoreEntitySet="TrackApproval">
+          <ScalarProperty Name="BudgetYr" ColumnName="BudgetYr" />
+          <ScalarProperty Name="ActionBy" ColumnName="ActionBy" />
+          <ScalarProperty Name="dateApproved" ColumnName="dateApproved" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATCRequestHeaders">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.ATCRequestHeader">
+        <MappingFragment StoreEntitySet="ATCRequestHeader">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RequestBy" ColumnName="RequestBy" />
+          <ScalarProperty Name="BudgetTypeId" ColumnName="BudgetTypeId" />
+          <ScalarProperty Name="BudgetYrID" ColumnName="BudgetYrID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GSS_Invoice">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.GSS_Invoice">
+        <MappingFragment StoreEntitySet="GSS_Invoice">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TotalVAT" ColumnName="TotalVAT" />
+          <ScalarProperty Name="TotalInvoiceAmount" ColumnName="TotalInvoiceAmount" />
+          <ScalarProperty Name="TotalCertifiedVolume" ColumnName="TotalCertifiedVolume" />
+          <ScalarProperty Name="PeriodMonth" ColumnName="PeriodMonth" />
+          <ScalarProperty Name="PeriodYear" ColumnName="PeriodYear" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GSS_PipelineSection">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.GSS_PipelineSection">
+        <MappingFragment StoreEntitySet="GSS_PipelineSection">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GSS_SalesTbl">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.GSS_SalesTbl">
+        <MappingFragment StoreEntitySet="GSS_SalesTbl">
+          <ScalarProperty Name="TransactionPeriod" ColumnName="TransactionPeriod" />
+          <ScalarProperty Name="InvoicedBy" ColumnName="InvoicedBy" />
+          <ScalarProperty Name="DateInvoiced" ColumnName="DateInvoiced" />
+          <ScalarProperty Name="VatValue" ColumnName="VatValue" />
+          <ScalarProperty Name="InvoiceValue" ColumnName="InvoiceValue" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertifiedApprovedby" ColumnName="CertifiedApprovedby" />
+          <ScalarProperty Name="CertifiedBy" ColumnName="CertifiedBy" />
+          <ScalarProperty Name="DateCertified" ColumnName="DateCertified" />
+          <ScalarProperty Name="CertifiedVolumeSale" ColumnName="CertifiedVolumeSale" />
+          <ScalarProperty Name="CapturedVolumeApprovedBy" ColumnName="CapturedVolumeApprovedBy" />
+          <ScalarProperty Name="CapturedBy" ColumnName="CapturedBy" />
+          <ScalarProperty Name="DateCaptured" ColumnName="DateCaptured" />
+          <ScalarProperty Name="CapturedVolumeSale" ColumnName="CapturedVolumeSale" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GSS_Customer">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.GSS_Customer">
+        <MappingFragment StoreEntitySet="GSS_Customer">
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="CapitalRecovery" ColumnName="CapitalRecovery" />
+          <ScalarProperty Name="MinimumOrderVolume" ColumnName="MinimumOrderVolume" />
+          <ScalarProperty Name="VATFlg" ColumnName="VATFlg" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="PaymentTermFlg" ColumnName="PaymentTermFlg" />
+          <ScalarProperty Name="PipelineSectionID" ColumnName="PipelineSectionID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndirectBudgetATCs">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.IndirectBudgetATC">
+        <MappingFragment StoreEntitySet="IndirectBudgetATC">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="BudgetItem" ColumnName="BudgetItem" />
+          <ScalarProperty Name="BudgetItemId" ColumnName="BudgetItemId" />
+          <ScalarProperty Name="ATCBatchId" ColumnName="ATCBatchId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DirectBudgetATCs">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.DirectBudgetATC">
+        <MappingFragment StoreEntitySet="DirectBudgetATC">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="BudgetItem" ColumnName="BudgetItem" />
+          <ScalarProperty Name="BudgetItemId" ColumnName="BudgetItemId" />
+          <ScalarProperty Name="ATCBatchId" ColumnName="ATCBatchId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetBudgetATCs">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.AssetBudgetATC">
+        <MappingFragment StoreEntitySet="AssetBudgetATC">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="BudgetItem" ColumnName="BudgetItem" />
+          <ScalarProperty Name="BudgetItemId" ColumnName="BudgetItemId" />
+          <ScalarProperty Name="ATCBatchId" ColumnName="ATCBatchId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CapexBudgetATCs">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.CapexBudgetATC">
+        <MappingFragment StoreEntitySet="CapexBudgetATC">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="BudgetItem" ColumnName="BudgetItem" />
+          <ScalarProperty Name="BudgetItemId" ColumnName="BudgetItemId" />
+          <ScalarProperty Name="ATCBatchId" ColumnName="ATCBatchId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExistingStaffBudgetATCs">
+      <EntityTypeMapping TypeName="BudgetCaptureDBModel.ExistingStaffBudgetATC">
+        <MappingFragment StoreEntitySet="ExistingStaffBudgetATC">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ATCAmount" ColumnName="ATCAmount" />
+          <ScalarProperty Name="BudgetItem" ColumnName="BudgetItem" />
+          <ScalarProperty Name="BudgetItemId" ColumnName="BudgetItemId" />
+          <ScalarProperty Name="ATCBatchId" ColumnName="ATCBatchId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

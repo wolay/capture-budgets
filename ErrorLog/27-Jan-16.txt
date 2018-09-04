@@ -1,0 +1,55 @@
+
+Log Entry : 
+01/27/2016 18:31:02
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: An error occurred while updating the entries. See the inner exception for details.
+__________________________
+
+Log Entry : 
+01/27/2016 18:40:04
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: An error occurred while updating the entries. See the inner exception for details.
+__________________________
+
+Log Entry : 
+01/27/2016 18:54:44
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: String was not recognized as a valid DateTime.
+__________________________
+
+Log Entry : 
+01/27/2016 18:55:21
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: String was not recognized as a valid DateTime.
+__________________________
+
+Log Entry : 
+01/27/2016 19:34:21
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/27/2016 19:35:40
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/27/2016 19:36:09
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/27/2016 19:36:25
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/27/2016 19:39:39
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/27/2016 19:39:55
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/27/2016 19:43:07
+Error in: http://localhost:61559/GSS/CaptureGasSales.aspx. Error Message:Error: 
+__________________________

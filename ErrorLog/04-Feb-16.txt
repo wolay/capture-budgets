@@ -1,0 +1,25 @@
+
+Log Entry : 
+02/04/2016 16:02:54
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: The entity or complex type 'BudgetCaptureDBModel.Department' cannot be constructed in a LINQ to Entities query.
+__________________________
+
+Log Entry : 
+02/04/2016 16:03:10
+Error in: http://localhost:61559/Admin/ManageDept.aspx. Error Message:Error: The entity or complex type 'BudgetCaptureDBModel.Department' cannot be constructed in a LINQ to Entities query.
+__________________________
+
+Log Entry : 
+02/04/2016 16:10:56
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: The entity or complex type 'BudgetCaptureDBModel.Department' cannot be constructed in a LINQ to Entities query.
+__________________________
+
+Log Entry : 
+02/04/2016 16:22:56
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: The entity or complex type 'BudgetCaptureDBModel.Department' cannot be constructed in a LINQ to Entities query.
+__________________________
+
+Log Entry : 
+02/04/2016 16:28:45
+Error in: http://localhost:61559/Default.aspx. Error Message:Error: The entity or complex type 'BudgetCaptureDBModel.Department' cannot be constructed in a LINQ to Entities query.
+__________________________

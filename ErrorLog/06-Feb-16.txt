@@ -1,0 +1,18 @@
+
+Log Entry : 
+02/06/2016 13:43:35
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at BudgetCapture.IndirectBudgetPg.gvDept_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\IndirectBudgetPg.aspx.cs:line 404
+__________________________
+
+Log Entry : 
+02/06/2016 15:59:52
+Error in: http://localhost:61559/IndirectBudgetPg.aspx?deptId=7&&batchId=ID-2&&Id=14. Error Message:Error: A specified Include path is not valid. The EntityType 'BudgetCaptureDBModel.IndirectBudgetATC' does not declare a navigation property with the name 'Department'.
+__________________________
+
+Log Entry : 
+02/06/2016 16:03:40
+Error in: http://localhost:61559/IndirectBudgetPg.aspx?deptId=7&&batchId=ID-2&&Id=14. Error Message:Error: A specified Include path is not valid. The EntityType 'BudgetCaptureDBModel.IndirectBudgetATC' does not declare a navigation property with the name 'Department'.
+__________________________

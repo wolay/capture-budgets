@@ -1,0 +1,40 @@
+
+Log Entry : 
+08/25/2014 11:05:41
+Error in: http://localhost:20608/ExistingStaffpg.aspx. Error Message:Error: Cannot use a leading .. to exit above the top directory.
+__________________________
+
+Log Entry : 
+08/25/2014 13:56:03
+Error in: http://localhost:20608/NewHiresPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/25/2014 13:56:38
+Error in: http://localhost:20608/NewHiresPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/25/2014 13:57:39
+Error in: http://localhost:20608/NewHiresPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/25/2014 13:58:37
+Error in: http://localhost:20608/NewHiresPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/25/2014 14:48:57
+Error in: http://localhost:20608/NewHiresPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/25/2014 14:50:31
+Error in: http://localhost:20608/NewHiresPage.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/25/2014 14:51:20
+Error in: http://localhost:20608/NewHiresPage.aspx. Error Message:Error: 
+__________________________

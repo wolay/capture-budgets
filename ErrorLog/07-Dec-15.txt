@@ -1,0 +1,28 @@
+
+Log Entry : 
+12/07/2015 14:28:17
+Error in: http://localhost:61559/Admin/ManageDirectExpenseItem.aspx. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.IndirectBudgetItem_18A894AC8E97EA83D5FA295A5BA308580028234BF31FA865B238FE0434646CAE' does not contain a property with the name 'DirectType'.
+__________________________
+
+Log Entry : 
+12/07/2015 14:29:41
+Error in: http://localhost:61559/Admin/ManageDirectExpenseItem.aspx. Error Message:Error: DataBinding: 'System.Data.Entity.DynamicProxies.IndirectBudgetItem_18A894AC8E97EA83D5FA295A5BA308580028234BF31FA865B238FE0434646CAE' does not contain a property with the name 'DirectType'.
+__________________________
+
+Log Entry : 
+12/07/2015 19:29:36
+Error in: http://localhost:61559/CapexBudgetPg.aspx. Error Message:Error: 'ddlCat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________
+
+Log Entry : 
+12/07/2015 19:30:25
+Error in: http://localhost:61559/CapexBudgetPg.aspx. Error Message:Error: 'ddlCat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________
+
+Log Entry : 
+12/07/2015 19:33:57
+Error in: http://localhost:61559/CapexBudgetPg.aspx. Error Message:Error: 'ddlCat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________

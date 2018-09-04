@@ -1,0 +1,90 @@
+
+Log Entry : 
+01/28/2016 04:15:29
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=18. Error Message:Error: The user '110046' is already not in role 'Commercial-Officer'.
+__________________________
+
+Log Entry : 
+01/28/2016 04:15:33
+Error in: http://localhost:61559/Admin/UserDetail.aspx?id=18. Error Message:Error: The user '110046' is already not in role 'Commercial-Officer'.
+__________________________
+
+Log Entry : 
+01/28/2016 04:28:05
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 04:28:05
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 04:28:05
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 04:28:05
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 04:30:09
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 04:30:34
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 04:30:36
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 04:30:39
+Error in: http://localhost:61559/GSS/PendingCapturedGasSales.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+01/28/2016 20:05:07
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: DataBinding: 'BudgetCapture.BLL.CertifiedSalesData' does not contain a property with the name 'ID'.
+__________________________
+
+Log Entry : 
+01/28/2016 20:06:42
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: DataBinding: 'BudgetCapture.BLL.CertifiedSalesData' does not contain a property with the name 'ID'.
+__________________________
+
+Log Entry : 
+01/28/2016 20:07:39
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: DataBinding: 'BudgetCapture.BLL.CertifiedSalesData' does not contain a property with the name 'ID'.
+__________________________
+
+Log Entry : 
+01/28/2016 20:09:00
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: DataBinding: 'BudgetCapture.BLL.CertifiedSalesData' does not contain a property with the name 'ID'.
+__________________________
+
+Log Entry : 
+01/28/2016 20:09:27
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: DataBinding: 'BudgetCapture.BLL.CertifiedSalesData' does not contain a property with the name 'ID'.
+__________________________
+
+Log Entry : 
+01/28/2016 20:09:39
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: DataBinding: 'BudgetCapture.BLL.CertifiedSalesData' does not contain a property with the name 'ID'.
+__________________________
+
+Log Entry : 
+01/28/2016 20:10:22
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: A field or property with the name 'CapturedVolumeSale' was not found on the selected data source.
+__________________________
+
+Log Entry : 
+01/28/2016 20:11:30
+Error in: http://localhost:61559/GssHome.aspx. Error Message:Error: A field or property with the name 'CapturedVolumeSale' was not found on the selected data source.
+__________________________

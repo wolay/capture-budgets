@@ -1,0 +1,221 @@
+
+Log Entry : 
+08/27/2014 08:52:12
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 08:53:48
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 09:10:25
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: A referential integrity constraint violation occurred: The property value(s) of 'Asset.ID' on one end of a relationship do not match the property value(s) of 'AssetBudget.AssetID' on the other end.
+__________________________
+
+Log Entry : 
+08/27/2014 09:13:51
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: A referential integrity constraint violation occurred: The property value(s) of 'Asset.ID' on one end of a relationship do not match the property value(s) of 'AssetBudget.AssetID' on the other end.
+__________________________
+
+Log Entry : 
+08/27/2014 09:30:05
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 'ddlCat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________
+
+Log Entry : 
+08/27/2014 09:31:25
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 'ddlCat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________
+
+Log Entry : 
+08/27/2014 09:33:51
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 'ddlAsset' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________
+
+Log Entry : 
+08/27/2014 09:35:14
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 'ddlAsset' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+__________________________
+
+Log Entry : 
+08/27/2014 13:06:07
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:15:03
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:49:11
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:49:11
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:49:11
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:49:11
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:49:11
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:50:39
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:50:39
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:50:39
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:50:39
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 13:50:39
+Error in: http://localhost:20608/Capex.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 15:19:09
+Error in: http://localhost:20608/Admin/ManageObligorType.aspx. Error Message:Error: System.ObjectDisposedException: The ObjectContext instance has been disposed and can no longer be used for operations that require a connection.
+   at System.Data.Entity.Core.Objects.ObjectContext.get_Connection()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.Execute(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Load(MergeOption mergeOption)
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load()
+   at System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.DeferredLoad()
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.LoadProperty[TItem](TItem propertyValue, String relationshipName, String targetRoleName, Boolean mustBeNull, Object wrapperObject)
+   at System.Data.Entity.Core.Objects.Internal.LazyLoadBehavior.<>c__DisplayClass7`2.<GetInterceptorDelegate>b__2(TProxy proxy, TItem item)
+   at System.Data.Entity.DynamicProxies.ObligorType_58CE2B29E522ACC0FBE8D9D511D60665CDA24ADAC119516C9ACE9A1E93C38876.get_RecoveryType()
+__________________________
+
+Log Entry : 
+08/27/2014 15:20:16
+Error in: http://localhost:20608/Admin/ManageObligorType.aspx. Error Message:Error: A field or property with the name 'AssetName' was not found on the selected data source.
+__________________________
+
+Log Entry : 
+08/27/2014 15:20:46
+Error in: http://localhost:20608/Admin/ManageObligorType.aspx. Error Message:Error: A field or property with the name 'AssetName' was not found on the selected data source.
+__________________________
+
+Log Entry : 
+08/27/2014 15:20:54
+Error in: http://localhost:20608/Admin/ManageObligorType.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/27/2014 15:21:22
+Error in: http://localhost:20608/Admin/ManageObligorType.aspx. Error Message:Error: A field or property with the name 'AssetName' was not found on the selected data source.
+__________________________
+
+Log Entry : 
+08/27/2014 16:19:33
+Error in: http://localhost:20608/Admin/ManageObligor.aspx. Error Message:Error: System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: A dependent property in a ReferentialConstraint is mapped to a store-generated column. Column: 'ObligorTypeID'.
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCompiler.BuildSetClauses(DbExpressionBinding target, PropagatorResult row, PropagatorResult originalRow, TableChangeProcessor processor, Boolean insertMode, Dictionary`2& outputIdentifiers, DbExpression& returning, Boolean& rowMustBeTouched)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCompiler.BuildInsertCommand(PropagatorResult newRow, TableChangeProcessor processor)
+   at System.Data.Entity.Core.Mapping.Update.Internal.TableChangeProcessor.CompileCommands(ChangeNode changeNode, UpdateCompiler compiler)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.TableChangeProcessor.CompileCommands(ChangeNode changeNode, UpdateCompiler compiler)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<ProduceDynamicCommands>d__0.MoveNext()
+   at System.Linq.Enumerable.<ConcatIterator>d__71`1.MoveNext()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCommandOrderer..ctor(IEnumerable`1 commands, UpdateTranslator translator)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__d()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClassb.<SaveChangesInternal>b__8()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+__________________________
+
+Log Entry : 
+08/27/2014 16:20:52
+Error in: http://localhost:20608/Admin/ManageObligor.aspx. Error Message:Error: System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: A dependent property in a ReferentialConstraint is mapped to a store-generated column. Column: 'ObligorTypeID'.
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCompiler.BuildSetClauses(DbExpressionBinding target, PropagatorResult row, PropagatorResult originalRow, TableChangeProcessor processor, Boolean insertMode, Dictionary`2& outputIdentifiers, DbExpression& returning, Boolean& rowMustBeTouched)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCompiler.BuildInsertCommand(PropagatorResult newRow, TableChangeProcessor processor)
+   at System.Data.Entity.Core.Mapping.Update.Internal.TableChangeProcessor.CompileCommands(ChangeNode changeNode, UpdateCompiler compiler)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.TableChangeProcessor.CompileCommands(ChangeNode changeNode, UpdateCompiler compiler)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<ProduceDynamicCommands>d__0.MoveNext()
+   at System.Linq.Enumerable.<ConcatIterator>d__71`1.MoveNext()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCommandOrderer..ctor(IEnumerable`1 commands, UpdateTranslator translator)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__d()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClassb.<SaveChangesInternal>b__8()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+__________________________
+
+Log Entry : 
+08/27/2014 16:25:41
+Error in: http://localhost:20608/Admin/ManageObligor.aspx. Error Message:Error: System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: A dependent property in a ReferentialConstraint is mapped to a store-generated column. Column: 'ObligorTypeID'.
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCompiler.BuildSetClauses(DbExpressionBinding target, PropagatorResult row, PropagatorResult originalRow, TableChangeProcessor processor, Boolean insertMode, Dictionary`2& outputIdentifiers, DbExpression& returning, Boolean& rowMustBeTouched)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCompiler.BuildInsertCommand(PropagatorResult newRow, TableChangeProcessor processor)
+   at System.Data.Entity.Core.Mapping.Update.Internal.TableChangeProcessor.CompileCommands(ChangeNode changeNode, UpdateCompiler compiler)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.TableChangeProcessor.CompileCommands(ChangeNode changeNode, UpdateCompiler compiler)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<ProduceDynamicCommands>d__0.MoveNext()
+   at System.Linq.Enumerable.<ConcatIterator>d__71`1.MoveNext()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateCommandOrderer..ctor(IEnumerable`1 commands, UpdateTranslator translator)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__d()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClassb.<SaveChangesInternal>b__8()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+__________________________
+
+Log Entry : 
+08/27/2014 16:29:07
+Error in: http://localhost:20608/Admin/ManageObligor.aspx. Error Message:Error: 
+__________________________

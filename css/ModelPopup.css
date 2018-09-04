@@ -1,0 +1,67 @@
+﻿body {
+}
+body .modalBackground
+    {
+        background-color: Black;
+        filter: alpha(opacity=40);
+        opacity: 0.6;
+    }
+    .modalPopup
+    {
+        background-color: #FFFFFF;
+        min-width: 500px;
+        border: 1px solid #B3CC57;
+        border-radius:8px;
+    }
+    .modalPopup .header
+    {
+        background-color: #345523;
+        padding:12px;
+        color: White;
+        margin-bottom:10px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        border-top-left-radius:8px;
+        border-top-right-radius:8px;
+    }
+    .modalPopup .body
+    {
+        min-height: 100px;
+        line-height: 30px;
+        text-align: center;
+        padding:5px
+    }
+      .modalPopup .body .image-view
+      {
+          /*width:450px;*/
+          padding:3px;
+          margin-bottom:4px;
+          padding-right:3px;
+          border:1px solid #E0D9BD;
+          border-radius:8px;
+      }
+      .modalPopup .body .image-view img
+      {
+          padding:3px;
+          
+      }
+    .modalPopup .footer
+    {
+        padding: 3px;
+    }
+    .modalPopup .button
+    {
+        height: 23px;
+        color: White;
+        line-height: 23px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #9F9F9F;
+        border: 1px solid #5C5C5C;
+    }
+    .modalPopup td
+    {
+        text-align:left;
+    }

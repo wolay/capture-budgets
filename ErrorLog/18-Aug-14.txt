@@ -1,0 +1,10 @@
+
+Log Entry : 
+08/18/2014 13:08:36
+Error in: http://localhost:20608/Admin/ManageGrades.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+08/18/2014 13:25:34
+Error in: http://localhost:20608/Admin/ManageGrades.aspx. Error Message:Error: 
+__________________________

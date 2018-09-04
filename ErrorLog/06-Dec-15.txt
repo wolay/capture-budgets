@@ -1,0 +1,10 @@
+
+Log Entry : 
+12/06/2015 17:41:13
+Error in: http://localhost:61559/Admin/ManageIndirectType.aspx. Error Message:Error: Input string was not in a correct format.
+__________________________
+
+Log Entry : 
+12/06/2015 17:43:11
+Error in: http://localhost:61559/Admin/ManageIndirectType.aspx. Error Message:Error: Input string was not in a correct format.
+__________________________

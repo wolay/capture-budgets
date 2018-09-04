@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09D1A100-7A85-4DA0-BC82-3A2ABABBD597}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BudgetCapture</RootNamespace>
+    <AssemblyName>BudgetCapture</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\FleetMgtSolution_TEST\FleetMgtSolution\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Admin\CustomerDetails.aspx" />
+    <Content Include="Admin\GssLookupForm.aspx" />
+    <Content Include="Admin\ManageCapexItem.aspx" />
+    <Content Include="Admin\ManageCapexType.aspx" />
+    <Content Include="Admin\ManageDirectExpenseItem.aspx" />
+    <Content Include="Admin\ManageDirectType.aspx" />
+    <Content Include="Admin\ManageGssCustomer.aspx" />
+    <Content Include="Admin\ManageIndirectItem.aspx" />
+    <Content Include="Admin\EmailTemplates\NewUserCreated.htm" />
+    <Content Include="Admin\ManageAsset.aspx" />
+    <Content Include="Admin\ManageAssetType.aspx" />
+    <Content Include="Admin\ManageGradeSalElement.aspx" />
+    <Content Include="Admin\ManageIndirectType.aspx" />
+    <Content Include="Admin\ManageCustomer.aspx" />
+    <Content Include="Admin\ManageCustomerType.aspx" />
+    <Content Include="Admin\ManagePipelineSection.aspx" />
+    <Content Include="Admin\ManageSalaryCategory.aspx" />
+    <Content Include="Admin\ManageSalaryElement.aspx" />
+    <Content Include="Admin\SetupCustomer.aspx" />
+    <Content Include="ATCRequestList.aspx" />
+    <Content Include="CapexBudgetPg.aspx" />
+    <Content Include="DirectBudgetPg.aspx" />
+    <Content Include="EmailTemplates\ApproveBudget.htm" />
+    <Content Include="EmailTemplates\ATCApproval.htm" />
+    <Content Include="EmailTemplates\ATCApprovalNotification.htm" />
+    <Content Include="EmailTemplates\RejectBudget.htm" />
+    <Content Include="EmailTemplates\ReturnATCRequest.htm" />
+    <Content Include="GssHome.aspx" />
+    <Content Include="GSS\ApproveCertifiedVolume.aspx" />
+    <Content Include="GSS\CaptureGasSales.aspx" />
+    <Content Include="GSS\CertifySaleVolume.aspx" />
+    <Content Include="GSS\ManageCertifiedSalesVolume.aspx" />
+    <Content Include="GSS\PendingCapturedGasSales.aspx" />
+    <Content Include="img\ngclogo.jpg" />
+    <Content Include="img\ngclogo.png" />
+    <Content Include="IndirectBudgetPg.aspx" />
+    <Content Include="MovableAsset.aspx" />
+    <Content Include="css\ModelPopup.css" />
+    <Content Include="EmailTemplates\ReturnBudget.htm" />
+    <Content Include="ExistingStaffpg.aspx" />
+    <Content Include="Admin\LookupForms.aspx" />
+    <Content Include="Admin\ManageBudgetYr.aspx" />
+    <Content Include="Admin\ManageDept.aspx" />
+    <Content Include="Admin\ManageDirectorate.aspx" />
+    <Content Include="Admin\ManageGrades.aspx" />
+    <Content Include="Admin\UserDetail.aspx" />
+    <Content Include="Admin\UserSetup.aspx" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="img\AmconLogoTrans.png" />
+    <Content Include="img\budget-smart2.png" />
+    <Content Include="img\budget-smart.png" />
+    <Content Include="img\cal.gif" />
+    <Content Include="img\delete-icon.png" />
+    <Content Include="img\edit_icon.png" />
+    <Content Include="img\inner-bg-icon.png" />
+    <Content Include="img\loadinfo.GIF" />
+    <Content Include="img\loadinfo2.gif" />
+    <Content Include="img\view_icon.png" />
+    <Content Include="js\action.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Reports\ATCRequestProRpt.aspx" />
+    <Content Include="Reports\CapexATCProRpt.aspx" />
+    <Content Include="Reports\CapexProRpt.aspx" />
+    <Content Include="Reports\DirectProATCRpt.aspx" />
+    <Content Include="Reports\ExistingStaffATCRpt.aspx" />
+    <Content Include="Reports\IndirectProATCRpt.aspx" />
+    <Content Include="Reports\MovableProATCRpt.aspx" />
+    <Content Include="RevenueProjectionPage.aspx" />
+    <Content Include="Reports\MovableRpt.aspx" />
+    <Content Include="Reports\MovableRpt_ED.aspx" />
+    <Content Include="Reports\ExistingStaffRpt.aspx" />
+    <Content Include="Reports\DirectProRpt.aspx" />
+    <Content Include="Reports\DirectPro_ED.aspx" />
+    <Content Include="Reports\NewHireRpt.aspx" />
+    <Content Include="Reports\NewHireRpt_ED.aspx" />
+    <Content Include="Reports\RevenueProRpt.aspx" />
+    <Content Include="Reports\IndirectProRpt.aspx" />
+    <Content Include="Reports\ReportHome.aspx" />
+    <Content Include="Reports\ExStaffRpt_ED.aspx" />
+    <Content Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dsBudgetRpt.xsc">
+      <DependentUpon>dsBudgetRpt.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsBudgetRpt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBudgetRpt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dsBudgetRpt.xss">
+      <DependentUpon>dsBudgetRpt.xsd</DependentUpon>
+    </None>
+    <Content Include="SiteGSS.Master" />
+    <None Include="Web References\ADAuth\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ADAuth\Service.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerDetails.aspx.cs">
+      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomerDetails.aspx.designer.cs">
+      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GssLookupForm.aspx.cs">
+      <DependentUpon>GssLookupForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GssLookupForm.aspx.designer.cs">
+      <DependentUpon>GssLookupForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageCapexItem.aspx.cs">
+      <DependentUpon>ManageCapexItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageCapexItem.aspx.designer.cs">
+      <DependentUpon>ManageCapexItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageCapexType.aspx.cs">
+      <DependentUpon>ManageCapexType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageCapexType.aspx.designer.cs">
+      <DependentUpon>ManageCapexType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageDirectExpenseItem.aspx.cs">
+      <DependentUpon>ManageDirectExpenseItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageDirectExpenseItem.aspx.designer.cs">
+      <DependentUpon>ManageDirectExpenseItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageDirectType.aspx.cs">
+      <DependentUpon>ManageDirectType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageDirectType.aspx.designer.cs">
+      <DependentUpon>ManageDirectType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageGssCustomer.aspx.cs">
+      <DependentUpon>ManageGssCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageGssCustomer.aspx.designer.cs">
+      <DependentUpon>ManageGssCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageIndirectItem.aspx.cs">
+      <DependentUpon>ManageIndirectItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageIndirectItem.aspx.designer.cs">
+      <DependentUpon>ManageIndirectItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageAsset.aspx.cs">
+      <DependentUpon>ManageAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageAsset.aspx.designer.cs">
+      <DependentUpon>ManageAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageAssetType.aspx.cs">
+      <DependentUpon>ManageAssetType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageAssetType.aspx.designer.cs">
+      <DependentUpon>ManageAssetType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageGradeSalElement.aspx.cs">
+      <DependentUpon>ManageGradeSalElement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageGradeSalElement.aspx.designer.cs">
+      <DependentUpon>ManageGradeSalElement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageIndirectType.aspx.cs">
+      <DependentUpon>ManageIndirectType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageIndirectType.aspx.designer.cs">
+      <DependentUpon>ManageIndirectType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageCustomer.aspx.cs">
+      <DependentUpon>ManageCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageCustomer.aspx.designer.cs">
+      <DependentUpon>ManageCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageCustomerType.aspx.cs">
+      <DependentUpon>ManageCustomerType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageCustomerType.aspx.designer.cs">
+      <DependentUpon>ManageCustomerType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagePipelineSection.aspx.cs">
+      <DependentUpon>ManagePipelineSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManagePipelineSection.aspx.designer.cs">
+      <DependentUpon>ManagePipelineSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageSalaryCategory.aspx.cs">
+      <DependentUpon>ManageSalaryCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageSalaryCategory.aspx.designer.cs">
+      <DependentUpon>ManageSalaryCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageSalaryElement.aspx.cs">
+      <DependentUpon>ManageSalaryElement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageSalaryElement.aspx.designer.cs">
+      <DependentUpon>ManageSalaryElement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SetupCustomer.aspx.cs">
+      <DependentUpon>SetupCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SetupCustomer.aspx.designer.cs">
+      <DependentUpon>SetupCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ATCRequestList.aspx.cs">
+      <DependentUpon>ATCRequestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ATCRequestList.aspx.designer.cs">
+      <DependentUpon>ATCRequestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\GasSalesBLL.cs" />
+    <Compile Include="CapexBudgetPg.aspx.cs">
+      <DependentUpon>CapexBudgetPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapexBudgetPg.aspx.designer.cs">
+      <DependentUpon>CapexBudgetPg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AssetBudgetATC.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ATCRequestHeader.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CapexBudget.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CapexBudgetATC.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CapexExpenseItem.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CapexType.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Customer.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CustomerType.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DirectBudget.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DirectBudgetATC.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DirectExpenseItem.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DirectType.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ExistingStaffBudgetATC.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GSS_Customer.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GSS_Invoice.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GSS_PipelineSection.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GSS_SalesTbl.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IndirectBudget.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IndirectBudgetATC.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IndirectBudgetItem.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\IndirectType.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\RevenueProjection.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TrackApproval.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DirectBudgetPg.aspx.cs">
+      <DependentUpon>DirectBudgetPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectBudgetPg.aspx.designer.cs">
+      <DependentUpon>DirectBudgetPg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GssHome.aspx.cs">
+      <DependentUpon>GssHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GssHome.aspx.designer.cs">
+      <DependentUpon>GssHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GSS\ApproveCertifiedVolume.aspx.cs">
+      <DependentUpon>ApproveCertifiedVolume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GSS\ApproveCertifiedVolume.aspx.designer.cs">
+      <DependentUpon>ApproveCertifiedVolume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GSS\CaptureGasSales.aspx.cs">
+      <DependentUpon>CaptureGasSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GSS\CaptureGasSales.aspx.designer.cs">
+      <DependentUpon>CaptureGasSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GSS\CertifySaleVolume.aspx.cs">
+      <DependentUpon>CertifySaleVolume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GSS\CertifySaleVolume.aspx.designer.cs">
+      <DependentUpon>CertifySaleVolume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GSS\ManageCertifiedSalesVolume.aspx.cs">
+      <DependentUpon>ManageCertifiedSalesVolume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GSS\ManageCertifiedSalesVolume.aspx.designer.cs">
+      <DependentUpon>ManageCertifiedSalesVolume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GSS\PendingCapturedGasSales.aspx.cs">
+      <DependentUpon>PendingCapturedGasSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GSS\PendingCapturedGasSales.aspx.designer.cs">
+      <DependentUpon>PendingCapturedGasSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndirectBudgetPg.aspx.cs">
+      <DependentUpon>IndirectBudgetPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndirectBudgetPg.aspx.designer.cs">
+      <DependentUpon>IndirectBudgetPg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MovableAsset.aspx.cs">
+      <DependentUpon>MovableAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovableAsset.aspx.designer.cs">
+      <DependentUpon>MovableAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Asset.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AssetBudget.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AssetType.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BudgetMenuItem.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BudgetSummaryView.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DBAccess.cs" />
+    <Compile Include="DAL\DepartmentBudgetMenu.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ExpenseProjection.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ExpenseType.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GradeSalaryElement.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SalaryElement.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SalBenCategory.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExistingStaffpg.aspx.cs">
+      <DependentUpon>ExistingStaffpg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExistingStaffpg.aspx.designer.cs">
+      <DependentUpon>ExistingStaffpg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LookupForms.aspx.cs">
+      <DependentUpon>LookupForms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LookupForms.aspx.designer.cs">
+      <DependentUpon>LookupForms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageBudgetYr.aspx.cs">
+      <DependentUpon>ManageBudgetYr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageBudgetYr.aspx.designer.cs">
+      <DependentUpon>ManageBudgetYr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageDept.aspx.cs">
+      <DependentUpon>ManageDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageDept.aspx.designer.cs">
+      <DependentUpon>ManageDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageDirectorate.aspx.cs">
+      <DependentUpon>ManageDirectorate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageDirectorate.aspx.designer.cs">
+      <DependentUpon>ManageDirectorate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageGrades.aspx.cs">
+      <DependentUpon>ManageGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageGrades.aspx.designer.cs">
+      <DependentUpon>ManageGrades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserDetail.aspx.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserDetail.aspx.designer.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserSetup.aspx.cs">
+      <DependentUpon>UserSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserSetup.aspx.designer.cs">
+      <DependentUpon>UserSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\CommonBLL.cs" />
+    <Compile Include="BLL\DepartmentBLL.cs" />
+    <Compile Include="BLL\LookUpBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\Utility.cs" />
+    <Compile Include="DAL\AppUser.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BudCapture.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudCapture.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BudCapture.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BudCapture.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudCapture.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BudgetYear.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Department.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Directorate.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ExistingStaff.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Grade.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ListedSecurity.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MonthOfYear.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Property.cs">
+      <DependentUpon>BudCapture.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ATCRequestProRpt.aspx.cs">
+      <DependentUpon>ATCRequestProRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ATCRequestProRpt.aspx.designer.cs">
+      <DependentUpon>ATCRequestProRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CapexATCProRpt.aspx.cs">
+      <DependentUpon>CapexATCProRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\CapexATCProRpt.aspx.designer.cs">
+      <DependentUpon>CapexATCProRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CapexProRpt.aspx.cs">
+      <DependentUpon>CapexProRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\CapexProRpt.aspx.designer.cs">
+      <DependentUpon>CapexProRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DirectProATCRpt.aspx.cs">
+      <DependentUpon>DirectProATCRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DirectProATCRpt.aspx.designer.cs">
+      <DependentUpon>DirectProATCRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExistingStaffATCRpt.aspx.cs">
+      <DependentUpon>ExistingStaffATCRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ExistingStaffATCRpt.aspx.designer.cs">
+      <DependentUpon>ExistingStaffATCRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IndirectProATCRpt.aspx.cs">
+      <DependentUpon>IndirectProATCRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\IndirectProATCRpt.aspx.designer.cs">
+      <DependentUpon>IndirectProATCRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MovableProATCRpt.aspx.cs">
+      <DependentUpon>MovableProATCRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\MovableProATCRpt.aspx.designer.cs">
+      <DependentUpon>MovableProATCRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RevenueProjectionPage.aspx.cs">
+      <DependentUpon>RevenueProjectionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevenueProjectionPage.aspx.designer.cs">
+      <DependentUpon>RevenueProjectionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MovableRpt.aspx.cs">
+      <DependentUpon>MovableRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\MovableRpt.aspx.designer.cs">
+      <DependentUpon>MovableRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MovableRpt_ED.aspx.cs">
+      <DependentUpon>MovableRpt_ED.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\MovableRpt_ED.aspx.designer.cs">
+      <DependentUpon>MovableRpt_ED.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\dsBudgetRpt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBudgetRpt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExistingStaffRpt.aspx.cs">
+      <DependentUpon>ExistingStaffRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ExistingStaffRpt.aspx.designer.cs">
+      <DependentUpon>ExistingStaffRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DirectProRpt.aspx.cs">
+      <DependentUpon>DirectProRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DirectProRpt.aspx.designer.cs">
+      <DependentUpon>DirectProRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DirectPro_ED.aspx.cs">
+      <DependentUpon>DirectPro_ED.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DirectPro_ED.aspx.designer.cs">
+      <DependentUpon>DirectPro_ED.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\NewHireRpt.aspx.cs">
+      <DependentUpon>NewHireRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\NewHireRpt.aspx.designer.cs">
+      <DependentUpon>NewHireRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\NewHireRpt_ED.aspx.cs">
+      <DependentUpon>NewHireRpt_ED.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\NewHireRpt_ED.aspx.designer.cs">
+      <DependentUpon>NewHireRpt_ED.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RevenueProRpt.aspx.cs">
+      <DependentUpon>RevenueProRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\RevenueProRpt.aspx.designer.cs">
+      <DependentUpon>RevenueProRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IndirectProRpt.aspx.cs">
+      <DependentUpon>IndirectProRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\IndirectProRpt.aspx.designer.cs">
+      <DependentUpon>IndirectProRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportHome.aspx.cs">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportHome.aspx.designer.cs">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExStaffRpt_ED.aspx.cs">
+      <DependentUpon>ExStaffRpt_ED.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ExStaffRpt_ED.aspx.designer.cs">
+      <DependentUpon>ExStaffRpt_ED.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteGSS.Master.cs">
+      <DependentUpon>SiteGSS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteGSS.Master.designer.cs">
+      <DependentUpon>SiteGSS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ADAuth\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ErrorLog\" />
+    <Folder Include="ExcelUpload\" />
+    <Folder Include="Reports_ED\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DAL\BudCapture.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BudCapture.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DAL\BudCapture.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BudCapture.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\BudCapture.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BudCapture.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ADAuth\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.20.10.8/AMCONService/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ADAuth\</RelPath>
+      <UpdateFromURL>http://172.20.10.8/AMCONService/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BudgetCapture_ADAuth_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\CapexRpt.rdlc" />
+    <EmbeddedResource Include="Reports\ATCrequestRpt.rdlc" />
+    <EmbeddedResource Include="Reports\CapexATCRpt.rdlc" />
+    <EmbeddedResource Include="Reports\ExistingStaffATCRpt.rdlc" />
+    <EmbeddedResource Include="Reports\MovableATCRpt.rdlc" />
+    <EmbeddedResource Include="Reports\DirectATCRpt.rdlc" />
+    <EmbeddedResource Include="Reports\IndirectATCRpt.rdlc" />
+    <EmbeddedResource Include="Reports\IndirectPro.rdlc" />
+    <EmbeddedResource Include="Reports\MovableRpt.rdlc" />
+    <EmbeddedResource Include="Reports\Movable_ED.rdlc" />
+    <EmbeddedResource Include="Reports\ExistingStaffRpt.rdlc" />
+    <EmbeddedResource Include="Reports\DirectPro.rdlc" />
+    <EmbeddedResource Include="Reports\DirectPro_ED.rdlc" />
+    <EmbeddedResource Include="Reports\NewHireRpt.rdlc" />
+    <EmbeddedResource Include="Reports\NewHireRpt_ED.rdlc" />
+    <EmbeddedResource Include="Reports\RevenueProRpt.rdlc" />
+    <EmbeddedResource Include="Reports\ExistingStaff_ED.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61559</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

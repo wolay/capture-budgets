@@ -1,0 +1,50 @@
+
+Log Entry : 
+02/05/2016 11:49:59
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/05/2016 11:49:59
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/05/2016 11:51:56
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/05/2016 11:51:56
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/05/2016 11:52:38
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/05/2016 11:52:38
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error: 
+__________________________
+
+Log Entry : 
+02/05/2016 11:56:30
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error:    at BudgetCapture.IndirectBudgetPg.gvDept_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\IndirectBudgetPg.aspx.cs:line 393
+__________________________
+
+Log Entry : 
+02/05/2016 11:56:40
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error:    at BudgetCapture.IndirectBudgetPg.gvDept_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\IndirectBudgetPg.aspx.cs:line 393
+__________________________
+
+Log Entry : 
+02/05/2016 12:01:27
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error:    at BudgetCapture.IndirectBudgetPg.gvDept_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\IndirectBudgetPg.aspx.cs:line 393
+__________________________
+
+Log Entry : 
+02/05/2016 12:01:27
+Error in: http://localhost:61559/IndirectBudgetPg.aspx. Error Message:Error:    at BudgetCapture.IndirectBudgetPg.gvDept_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\Tope\myCode\myCode\BudgetCapture_Source_LIVE\IndirectBudgetPg.aspx.cs:line 393
+__________________________
